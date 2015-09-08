@@ -1,4 +1,3 @@
-import sympy as sp
 import matplotlib
 
 matplotlib.use('QT4Agg')
@@ -6,8 +5,6 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from mpl_toolkits.mplot3d import Axes3D
 from solar_system.solar_system_data import *
-
-sp.init_printing()
 
 from scipy.integrate import odeint as sp_odeint
 
@@ -142,9 +139,3 @@ def solar_plot(w):
         ax.plot(x, y, z, c)
 
     plt.show()
-
-
-if __name__ == '__main__':
-    import cProfile
-
-    cProfile.run('run()', sort='time')

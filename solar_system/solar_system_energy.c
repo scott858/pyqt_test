@@ -248,8 +248,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__solar_system_derivative
-#define __PYX_HAVE_API__solar_system_derivative
+#define __PYX_HAVE__solar_system_energy
+#define __PYX_HAVE_API__solar_system_energy
 #include "math.h"
 #include "pythread.h"
 #include "string.h"
@@ -464,7 +464,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "solar_system_derivative.pyx",
+  "solar_system_energy.pyx",
   "stringsource",
   "solar_system_data_cy.pxi",
 };
@@ -757,28 +757,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_GetAttrStr(PyObject* obj, PyObject
 
 static PyObject *__Pyx_GetBuiltinName(PyObject *name);
 
-static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name);
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw);
-#else
-#define __Pyx_PyObject_Call(func, arg, kw) PyObject_Call(func, arg, kw)
-#endif
-
-static CYTHON_INLINE void __Pyx_RaiseTooManyValuesError(Py_ssize_t expected);
-
-static CYTHON_INLINE void __Pyx_RaiseNeedMoreValuesError(Py_ssize_t index);
-
-static CYTHON_INLINE int __Pyx_IterFinish(void);
-
-static int __Pyx_IternextUnpackEndCheck(PyObject *retval, Py_ssize_t expected);
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg);
-#endif
-
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg);
-
 static CYTHON_INLINE int  __Pyx_GetBufferAndValidate(Py_buffer* buf, PyObject* obj,
     __Pyx_TypeInfo* dtype, int flags, int nd, int cast, __Pyx_BufFmt_StackElem* stack);
 static CYTHON_INLINE void __Pyx_SafeReleaseBuffer(Py_buffer* info);
@@ -816,6 +794,14 @@ static CYTHON_INLINE void __Pyx_ErrFetch(PyObject **type, PyObject **value, PyOb
 static void __Pyx_WriteUnraisable(const char *name, int clineno,
                                   int lineno, const char *filename,
                                   int full_traceback, int nogil);
+
+static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name);
+
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw);
+#else
+#define __Pyx_PyObject_Call(func, arg, kw) PyObject_Call(func, arg, kw)
+#endif
 
 static void __Pyx_RaiseArgtupleInvalid(const char* func_name, int exact,
     Py_ssize_t num_min, Py_ssize_t num_max, Py_ssize_t num_found);
@@ -856,6 +842,10 @@ static CYTHON_INLINE PyObject* __Pyx_decode_c_string(
          const char* cstring, Py_ssize_t start, Py_ssize_t stop,
          const char* encoding, const char* errors,
          PyObject* (*decode_func)(const char *s, Py_ssize_t size, const char *errors));
+
+static CYTHON_INLINE void __Pyx_RaiseTooManyValuesError(Py_ssize_t expected);
+
+static CYTHON_INLINE void __Pyx_RaiseNeedMoreValuesError(Py_ssize_t index);
 
 static CYTHON_INLINE void __Pyx_RaiseNoneNotIterableError(void);
 
@@ -959,6 +949,12 @@ static CYTHON_INLINE int __Pyx_PyList_Append(PyObject* list, PyObject* x) {
 static CYTHON_INLINE long __Pyx_div_long(long, long);
 
 static PyObject *__pyx_memoryviewslice__get__base(PyObject *__pyx_v_self); /*proto*/
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg);
+#endif
+
+static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg);
+
 #if PY_MAJOR_VERSION < 3
 #define __Pyx_PyString_Join __Pyx_PyBytes_Join
 #define __Pyx_PyBaseString_Join(s, v) (PyUnicode_CheckExact(s) ? PyUnicode_Join(s, v) : __Pyx_PyBytes_Join(s, v))
@@ -1067,6 +1063,8 @@ static int __Pyx_ValidateAndInit_memviewslice(
 
 static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_dc_double(PyObject *);
 
+static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_d_dc_double(PyObject *);
+
 static int __Pyx_check_binary_version(void);
 
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
@@ -1083,105 +1081,105 @@ static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memo
 
 /* Module declarations from 'libc.math' */
 
-/* Module declarations from 'solar_system_derivative' */
+/* Module declarations from 'solar_system_energy' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
 static PyTypeObject *__pyx_memoryviewslice_type = 0;
-static double __pyx_v_23solar_system_derivative_m_sun;
-static double __pyx_v_23solar_system_derivative_m_mercury;
-static double __pyx_v_23solar_system_derivative_m_venus;
-static double __pyx_v_23solar_system_derivative_m_earth;
-static double __pyx_v_23solar_system_derivative_m_mars;
-static double __pyx_v_23solar_system_derivative_m_jupiter;
-static double __pyx_v_23solar_system_derivative_m_saturn;
-static double __pyx_v_23solar_system_derivative_m_uranus;
-static double __pyx_v_23solar_system_derivative_m_neptune;
-static double __pyx_v_23solar_system_derivative_m_pluto;
-static double __pyx_v_23solar_system_derivative_x_sun;
-static double __pyx_v_23solar_system_derivative_x_mercury;
-static double __pyx_v_23solar_system_derivative_x_venus;
-static double __pyx_v_23solar_system_derivative_x_earth;
-static double __pyx_v_23solar_system_derivative_x_mars;
-static double __pyx_v_23solar_system_derivative_x_jupiter;
-static double __pyx_v_23solar_system_derivative_x_saturn;
-static double __pyx_v_23solar_system_derivative_x_uranus;
-static double __pyx_v_23solar_system_derivative_x_neptune;
-static double __pyx_v_23solar_system_derivative_x_pluto;
-static double __pyx_v_23solar_system_derivative_y_sun;
-static double __pyx_v_23solar_system_derivative_y_mercury;
-static double __pyx_v_23solar_system_derivative_y_venus;
-static double __pyx_v_23solar_system_derivative_y_earth;
-static double __pyx_v_23solar_system_derivative_y_mars;
-static double __pyx_v_23solar_system_derivative_y_jupiter;
-static double __pyx_v_23solar_system_derivative_y_saturn;
-static double __pyx_v_23solar_system_derivative_y_uranus;
-static double __pyx_v_23solar_system_derivative_y_neptune;
-static double __pyx_v_23solar_system_derivative_y_pluto;
-static double __pyx_v_23solar_system_derivative_z_sun;
-static double __pyx_v_23solar_system_derivative_z_mercury;
-static double __pyx_v_23solar_system_derivative_z_venus;
-static double __pyx_v_23solar_system_derivative_z_earth;
-static double __pyx_v_23solar_system_derivative_z_mars;
-static double __pyx_v_23solar_system_derivative_z_jupiter;
-static double __pyx_v_23solar_system_derivative_z_saturn;
-static double __pyx_v_23solar_system_derivative_z_uranus;
-static double __pyx_v_23solar_system_derivative_z_neptune;
-static double __pyx_v_23solar_system_derivative_z_pluto;
-static double __pyx_v_23solar_system_derivative_vx_sun;
-static double __pyx_v_23solar_system_derivative_vx_mercury;
-static double __pyx_v_23solar_system_derivative_vx_venus;
-static double __pyx_v_23solar_system_derivative_vx_earth;
-static double __pyx_v_23solar_system_derivative_vx_mars;
-static double __pyx_v_23solar_system_derivative_vx_jupiter;
-static double __pyx_v_23solar_system_derivative_vx_saturn;
-static double __pyx_v_23solar_system_derivative_vx_uranus;
-static double __pyx_v_23solar_system_derivative_vx_neptune;
-static double __pyx_v_23solar_system_derivative_vx_pluto;
-static double __pyx_v_23solar_system_derivative_vy_sun;
-static double __pyx_v_23solar_system_derivative_vy_mercury;
-static double __pyx_v_23solar_system_derivative_vy_venus;
-static double __pyx_v_23solar_system_derivative_vy_earth;
-static double __pyx_v_23solar_system_derivative_vy_mars;
-static double __pyx_v_23solar_system_derivative_vy_jupiter;
-static double __pyx_v_23solar_system_derivative_vy_saturn;
-static double __pyx_v_23solar_system_derivative_vy_uranus;
-static double __pyx_v_23solar_system_derivative_vy_neptune;
-static double __pyx_v_23solar_system_derivative_vy_pluto;
-static double __pyx_v_23solar_system_derivative_vz_sun;
-static double __pyx_v_23solar_system_derivative_vz_mercury;
-static double __pyx_v_23solar_system_derivative_vz_venus;
-static double __pyx_v_23solar_system_derivative_vz_earth;
-static double __pyx_v_23solar_system_derivative_vz_mars;
-static double __pyx_v_23solar_system_derivative_vz_jupiter;
-static double __pyx_v_23solar_system_derivative_vz_saturn;
-static double __pyx_v_23solar_system_derivative_vz_uranus;
-static double __pyx_v_23solar_system_derivative_vz_neptune;
-static double __pyx_v_23solar_system_derivative_vz_pluto;
-static double __pyx_v_23solar_system_derivative_ti;
-static double __pyx_v_23solar_system_derivative_days_per_year;
-static double __pyx_v_23solar_system_derivative_hours_per_day;
-static double __pyx_v_23solar_system_derivative_seconds_per_hour;
-static double __pyx_v_23solar_system_derivative_dt;
-static double __pyx_v_23solar_system_derivative_G;
-static int __pyx_v_23solar_system_derivative_number_dimensions;
-static int __pyx_v_23solar_system_derivative_number_particles;
-static __Pyx_memviewslice __pyx_v_23solar_system_derivative_g_masses = { 0, 0, { 0 }, { 0 }, { 0 } };
-static double __pyx_v_23solar_system_derivative_d[3];
-static __Pyx_memviewslice __pyx_v_23solar_system_derivative_g_displacement = { 0, 0, { 0 }, { 0 }, { 0 } };
-static double __pyx_v_23solar_system_derivative_c[3];
-static __Pyx_memviewslice __pyx_v_23solar_system_derivative_g_central_force_ij = { 0, 0, { 0 }, { 0 }, { 0 } };
+static double __pyx_v_19solar_system_energy_m_sun;
+static double __pyx_v_19solar_system_energy_m_mercury;
+static double __pyx_v_19solar_system_energy_m_venus;
+static double __pyx_v_19solar_system_energy_m_earth;
+static double __pyx_v_19solar_system_energy_m_mars;
+static double __pyx_v_19solar_system_energy_m_jupiter;
+static double __pyx_v_19solar_system_energy_m_saturn;
+static double __pyx_v_19solar_system_energy_m_uranus;
+static double __pyx_v_19solar_system_energy_m_neptune;
+static double __pyx_v_19solar_system_energy_m_pluto;
+static double __pyx_v_19solar_system_energy_x_sun;
+static double __pyx_v_19solar_system_energy_x_mercury;
+static double __pyx_v_19solar_system_energy_x_venus;
+static double __pyx_v_19solar_system_energy_x_earth;
+static double __pyx_v_19solar_system_energy_x_mars;
+static double __pyx_v_19solar_system_energy_x_jupiter;
+static double __pyx_v_19solar_system_energy_x_saturn;
+static double __pyx_v_19solar_system_energy_x_uranus;
+static double __pyx_v_19solar_system_energy_x_neptune;
+static double __pyx_v_19solar_system_energy_x_pluto;
+static double __pyx_v_19solar_system_energy_y_sun;
+static double __pyx_v_19solar_system_energy_y_mercury;
+static double __pyx_v_19solar_system_energy_y_venus;
+static double __pyx_v_19solar_system_energy_y_earth;
+static double __pyx_v_19solar_system_energy_y_mars;
+static double __pyx_v_19solar_system_energy_y_jupiter;
+static double __pyx_v_19solar_system_energy_y_saturn;
+static double __pyx_v_19solar_system_energy_y_uranus;
+static double __pyx_v_19solar_system_energy_y_neptune;
+static double __pyx_v_19solar_system_energy_y_pluto;
+static double __pyx_v_19solar_system_energy_z_sun;
+static double __pyx_v_19solar_system_energy_z_mercury;
+static double __pyx_v_19solar_system_energy_z_venus;
+static double __pyx_v_19solar_system_energy_z_earth;
+static double __pyx_v_19solar_system_energy_z_mars;
+static double __pyx_v_19solar_system_energy_z_jupiter;
+static double __pyx_v_19solar_system_energy_z_saturn;
+static double __pyx_v_19solar_system_energy_z_uranus;
+static double __pyx_v_19solar_system_energy_z_neptune;
+static double __pyx_v_19solar_system_energy_z_pluto;
+static double __pyx_v_19solar_system_energy_vx_sun;
+static double __pyx_v_19solar_system_energy_vx_mercury;
+static double __pyx_v_19solar_system_energy_vx_venus;
+static double __pyx_v_19solar_system_energy_vx_earth;
+static double __pyx_v_19solar_system_energy_vx_mars;
+static double __pyx_v_19solar_system_energy_vx_jupiter;
+static double __pyx_v_19solar_system_energy_vx_saturn;
+static double __pyx_v_19solar_system_energy_vx_uranus;
+static double __pyx_v_19solar_system_energy_vx_neptune;
+static double __pyx_v_19solar_system_energy_vx_pluto;
+static double __pyx_v_19solar_system_energy_vy_sun;
+static double __pyx_v_19solar_system_energy_vy_mercury;
+static double __pyx_v_19solar_system_energy_vy_venus;
+static double __pyx_v_19solar_system_energy_vy_earth;
+static double __pyx_v_19solar_system_energy_vy_mars;
+static double __pyx_v_19solar_system_energy_vy_jupiter;
+static double __pyx_v_19solar_system_energy_vy_saturn;
+static double __pyx_v_19solar_system_energy_vy_uranus;
+static double __pyx_v_19solar_system_energy_vy_neptune;
+static double __pyx_v_19solar_system_energy_vy_pluto;
+static double __pyx_v_19solar_system_energy_vz_sun;
+static double __pyx_v_19solar_system_energy_vz_mercury;
+static double __pyx_v_19solar_system_energy_vz_venus;
+static double __pyx_v_19solar_system_energy_vz_earth;
+static double __pyx_v_19solar_system_energy_vz_mars;
+static double __pyx_v_19solar_system_energy_vz_jupiter;
+static double __pyx_v_19solar_system_energy_vz_saturn;
+static double __pyx_v_19solar_system_energy_vz_uranus;
+static double __pyx_v_19solar_system_energy_vz_neptune;
+static double __pyx_v_19solar_system_energy_vz_pluto;
+static double __pyx_v_19solar_system_energy_ti;
+static double __pyx_v_19solar_system_energy_days_per_year;
+static double __pyx_v_19solar_system_energy_hours_per_day;
+static double __pyx_v_19solar_system_energy_seconds_per_hour;
+static double __pyx_v_19solar_system_energy_dt;
+static double __pyx_v_19solar_system_energy_G;
+static int __pyx_v_19solar_system_energy_number_dimensions;
+static int __pyx_v_19solar_system_energy_number_particles;
+static __Pyx_memviewslice __pyx_v_19solar_system_energy_g_masses = { 0, 0, { 0 }, { 0 }, { 0 } };
+static double __pyx_v_19solar_system_energy_d[3];
+static __Pyx_memviewslice __pyx_v_19solar_system_energy_g_displacement = { 0, 0, { 0 }, { 0 }, { 0 } };
 static PyObject *generic = 0;
 static PyObject *strided = 0;
 static PyObject *indirect = 0;
 static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
-static PyObject *__pyx_f_23solar_system_derivative_get_t(double, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_23solar_system_derivative_get_w0(int __pyx_skip_dispatch); /*proto*/
-static __Pyx_memviewslice __pyx_f_23solar_system_derivative_r(int, __Pyx_memviewslice); /*proto*/
-static void __pyx_f_23solar_system_derivative_calc_central_force(int, int, __Pyx_memviewslice); /*proto*/
-static __Pyx_memviewslice __pyx_f_23solar_system_derivative_f_core(__Pyx_memviewslice); /*proto*/
-static PyObject *__pyx_f_23solar_system_derivative_f(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static __Pyx_memviewslice __pyx_f_19solar_system_energy_r(int, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_19solar_system_energy_calc_potential_energy(int, int, __Pyx_memviewslice); /*proto*/
+static __Pyx_memviewslice __pyx_f_19solar_system_energy_total_potential_energy(__Pyx_memviewslice, int); /*proto*/
+static double __pyx_f_19solar_system_energy_calc_kinetic_energy(int, __Pyx_memviewslice); /*proto*/
+static __Pyx_memviewslice __pyx_f_19solar_system_energy_total_kinetic_energy(__Pyx_memviewslice, int); /*proto*/
+static PyObject *__pyx_f_19solar_system_energy_calc_energy(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_19solar_system_energy_kinetic(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_19solar_system_energy_potential(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -1216,11 +1214,10 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_format_from_typeinfo(__Pyx_TypeInfo *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "solar_system_derivative"
-int __pyx_module_is_main_solar_system_derivative = 0;
+#define __Pyx_MODULE_NAME "solar_system_energy"
+int __pyx_module_is_main_solar_system_energy = 0;
 
-/* Implementation of 'solar_system_derivative' */
-static PyObject *__pyx_builtin_zip;
+/* Implementation of 'solar_system_energy' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
@@ -1234,7 +1231,6 @@ static char __pyx_k_T[] = "T{";
   static char __pyx_k_c[] = "c";
   static char __pyx_k_m[] = "m";
   static char __pyx_k_s[] = "(%s)";
-  static char __pyx_k_t[] = "t";
   static char __pyx_k_w[] = "w";
   static char __pyx_k_id[] = "id";
   static char __pyx_k_np[] = "np";
@@ -1250,7 +1246,6 @@ static char __pyx_k_obj[] = "obj";
 static char __pyx_k_vx0[] = "vx0";
 static char __pyx_k_vy0[] = "vy0";
 static char __pyx_k_vz0[] = "vz0";
-static char __pyx_k_zip[] = "zip";
 static char __pyx_k_base[] = "base";
 static char __pyx_k_join[] = "join";
 static char __pyx_k_main[] = "__main__";
@@ -1273,7 +1268,6 @@ static char __pyx_k_range[] = "range";
 static char __pyx_k_shape[] = "shape";
 static char __pyx_k_start[] = "start";
 static char __pyx_k_zeros[] = "zeros";
-static char __pyx_k_arange[] = "arange";
 static char __pyx_k_double[] = "double";
 static char __pyx_k_encode[] = "encode";
 static char __pyx_k_format[] = "format";
@@ -1291,7 +1285,7 @@ static char __pyx_k_IndexError[] = "IndexError";
 static char __pyx_k_ValueError[] = "ValueError";
 static char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static char __pyx_k_MemoryError[] = "MemoryError";
-static char __pyx_k_concatenate[] = "concatenate";
+static char __pyx_k_time_points[] = "time_points";
 static char __pyx_k_pyx_getbuffer[] = "__pyx_getbuffer";
 static char __pyx_k_allocate_buffer[] = "allocate_buffer";
 static char __pyx_k_dtype_is_object[] = "dtype_is_object";
@@ -1346,13 +1340,11 @@ static PyObject *__pyx_kp_b__16;
 static PyObject *__pyx_kp_b__17;
 static PyObject *__pyx_kp_u__18;
 static PyObject *__pyx_n_s_allocate_buffer;
-static PyObject *__pyx_n_s_arange;
 static PyObject *__pyx_n_s_array;
 static PyObject *__pyx_n_s_base;
 static PyObject *__pyx_n_s_c;
 static PyObject *__pyx_n_u_c;
 static PyObject *__pyx_n_s_class;
-static PyObject *__pyx_n_s_concatenate;
 static PyObject *__pyx_kp_s_contiguous_and_direct;
 static PyObject *__pyx_kp_s_contiguous_and_indirect;
 static PyObject *__pyx_n_s_double;
@@ -1395,8 +1387,8 @@ static PyObject *__pyx_kp_s_strided_and_direct;
 static PyObject *__pyx_kp_s_strided_and_direct_or_indirect;
 static PyObject *__pyx_kp_s_strided_and_indirect;
 static PyObject *__pyx_n_s_struct;
-static PyObject *__pyx_n_s_t;
 static PyObject *__pyx_n_s_test;
+static PyObject *__pyx_n_s_time_points;
 static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
@@ -1408,10 +1400,9 @@ static PyObject *__pyx_n_s_x0;
 static PyObject *__pyx_n_s_y0;
 static PyObject *__pyx_n_s_z0;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_n_s_zip;
-static PyObject *__pyx_pf_23solar_system_derivative_get_t(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_years); /* proto */
-static PyObject *__pyx_pf_23solar_system_derivative_2get_w0(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_23solar_system_derivative_4f(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_t); /* proto */
+static PyObject *__pyx_pf_19solar_system_energy_calc_energy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_time_points); /* proto */
+static PyObject *__pyx_pf_19solar_system_energy_2kinetic(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_time_points); /* proto */
+static PyObject *__pyx_pf_19solar_system_energy_4potential(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_time_points); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -1512,745 +1503,7 @@ static PyObject *__pyx_tuple__21;
 static PyObject *__pyx_tuple__22;
 static PyObject *__pyx_tuple__23;
 
-/* "solar_system_derivative.pyx":13
- * 
- * 
- * cpdef get_t(double years):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double tf = years * days_per_year * hours_per_day * seconds_per_hour
- */
-
-static PyObject *__pyx_pw_23solar_system_derivative_1get_t(PyObject *__pyx_self, PyObject *__pyx_arg_years); /*proto*/
-static PyObject *__pyx_f_23solar_system_derivative_get_t(double __pyx_v_years, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  double __pyx_v_tf;
-  double __pyx_v_time_interval;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("get_t", 0);
-
-  /* "solar_system_derivative.pyx":15
- * cpdef get_t(double years):
- *     cdef:
- *         double tf = years * days_per_year * hours_per_day * seconds_per_hour             # <<<<<<<<<<<<<<
- *         double time_interval = tf - ti
- *     return np.arange(0, time_interval, dt, dtype=np.double)
- */
-  __pyx_v_tf = (((__pyx_v_years * __pyx_v_23solar_system_derivative_days_per_year) * __pyx_v_23solar_system_derivative_hours_per_day) * __pyx_v_23solar_system_derivative_seconds_per_hour);
-
-  /* "solar_system_derivative.pyx":16
- *     cdef:
- *         double tf = years * days_per_year * hours_per_day * seconds_per_hour
- *         double time_interval = tf - ti             # <<<<<<<<<<<<<<
- *     return np.arange(0, time_interval, dt, dtype=np.double)
- * 
- */
-  __pyx_v_time_interval = (__pyx_v_tf - __pyx_v_23solar_system_derivative_ti);
-
-  /* "solar_system_derivative.pyx":17
- *         double tf = years * days_per_year * hours_per_day * seconds_per_hour
- *         double time_interval = tf - ti
- *     return np.arange(0, time_interval, dt, dtype=np.double)             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_arange); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_time_interval); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_dt); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_INCREF(__pyx_int_0);
-  __Pyx_GIVEREF(__pyx_int_0);
-  PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_int_0);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_t_3);
-  __pyx_t_1 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_double); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_r = __pyx_t_5;
-  __pyx_t_5 = 0;
-  goto __pyx_L0;
-
-  /* "solar_system_derivative.pyx":13
- * 
- * 
- * cpdef get_t(double years):             # <<<<<<<<<<<<<<
- *     cdef:
- *         double tf = years * days_per_year * hours_per_day * seconds_per_hour
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("solar_system_derivative.get_t", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_23solar_system_derivative_1get_t(PyObject *__pyx_self, PyObject *__pyx_arg_years); /*proto*/
-static PyObject *__pyx_pw_23solar_system_derivative_1get_t(PyObject *__pyx_self, PyObject *__pyx_arg_years) {
-  double __pyx_v_years;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("get_t (wrapper)", 0);
-  assert(__pyx_arg_years); {
-    __pyx_v_years = __pyx_PyFloat_AsDouble(__pyx_arg_years); if (unlikely((__pyx_v_years == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L3_error:;
-  __Pyx_AddTraceback("solar_system_derivative.get_t", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return NULL;
-  __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23solar_system_derivative_get_t(__pyx_self, ((double)__pyx_v_years));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_23solar_system_derivative_get_t(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_years) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("get_t", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23solar_system_derivative_get_t(__pyx_v_years, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("solar_system_derivative.get_t", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "solar_system_derivative.pyx":20
- * 
- * 
- * cpdef get_w0():             # <<<<<<<<<<<<<<
- *     w0 = np.array([], dtype=np.double)
- *     for x0i, y0i, z0i in zip(x0, y0, z0):
- */
-
-static PyObject *__pyx_pw_23solar_system_derivative_3get_w0(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_23solar_system_derivative_get_w0(CYTHON_UNUSED int __pyx_skip_dispatch) {
-  PyObject *__pyx_v_w0 = NULL;
-  PyObject *__pyx_v_x0i = NULL;
-  PyObject *__pyx_v_y0i = NULL;
-  PyObject *__pyx_v_z0i = NULL;
-  PyObject *__pyx_v_vx0i = NULL;
-  PyObject *__pyx_v_vy0i = NULL;
-  PyObject *__pyx_v_vz0i = NULL;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  Py_ssize_t __pyx_t_6;
-  PyObject *(*__pyx_t_7)(PyObject *);
-  PyObject *__pyx_t_8 = NULL;
-  PyObject *(*__pyx_t_9)(PyObject *);
-  PyObject *__pyx_t_10 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("get_w0", 0);
-
-  /* "solar_system_derivative.pyx":21
- * 
- * cpdef get_w0():
- *     w0 = np.array([], dtype=np.double)             # <<<<<<<<<<<<<<
- *     for x0i, y0i, z0i in zip(x0, y0, z0):
- *         w0 = np.concatenate([w0, [x0i], [y0i], [z0i]])
- */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
-  __pyx_t_1 = 0;
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_w0 = __pyx_t_5;
-  __pyx_t_5 = 0;
-
-  /* "solar_system_derivative.pyx":22
- * cpdef get_w0():
- *     w0 = np.array([], dtype=np.double)
- *     for x0i, y0i, z0i in zip(x0, y0, z0):             # <<<<<<<<<<<<<<
- *         w0 = np.concatenate([w0, [x0i], [y0i], [z0i]])
- *     for vx0i, vy0i, vz0i in zip(vx0, vy0, vz0):
- */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_x0); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_y0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_z0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_3);
-  __pyx_t_5 = 0;
-  __pyx_t_1 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
-    __pyx_t_2 = __pyx_t_3; __Pyx_INCREF(__pyx_t_2); __pyx_t_6 = 0;
-    __pyx_t_7 = NULL;
-  } else {
-    __pyx_t_6 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_7 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  for (;;) {
-    if (likely(!__pyx_t_7)) {
-      if (likely(PyList_CheckExact(__pyx_t_2))) {
-        if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_2)) break;
-        #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(__pyx_t_3);
-        #endif
-      } else {
-        if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
-        #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(__pyx_t_3);
-        #endif
-      }
-    } else {
-      __pyx_t_3 = __pyx_t_7(__pyx_t_2);
-      if (unlikely(!__pyx_t_3)) {
-        PyObject* exc_type = PyErr_Occurred();
-        if (exc_type) {
-          if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        }
-        break;
-      }
-      __Pyx_GOTREF(__pyx_t_3);
-    }
-    if ((likely(PyTuple_CheckExact(__pyx_t_3))) || (PyList_CheckExact(__pyx_t_3))) {
-      PyObject* sequence = __pyx_t_3;
-      #if CYTHON_COMPILING_IN_CPYTHON
-      Py_ssize_t size = Py_SIZE(sequence);
-      #else
-      Py_ssize_t size = PySequence_Size(sequence);
-      #endif
-      if (unlikely(size != 3)) {
-        if (size > 3) __Pyx_RaiseTooManyValuesError(3);
-        else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      }
-      #if CYTHON_COMPILING_IN_CPYTHON
-      if (likely(PyTuple_CheckExact(sequence))) {
-        __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
-        __pyx_t_5 = PyTuple_GET_ITEM(sequence, 1); 
-        __pyx_t_4 = PyTuple_GET_ITEM(sequence, 2); 
-      } else {
-        __pyx_t_1 = PyList_GET_ITEM(sequence, 0); 
-        __pyx_t_5 = PyList_GET_ITEM(sequence, 1); 
-        __pyx_t_4 = PyList_GET_ITEM(sequence, 2); 
-      }
-      __Pyx_INCREF(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_5);
-      __Pyx_INCREF(__pyx_t_4);
-      #else
-      __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_4 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_4);
-      #endif
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    } else {
-      Py_ssize_t index = -1;
-      __pyx_t_8 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext;
-      index = 0; __pyx_t_1 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_1)) goto __pyx_L5_unpacking_failed;
-      __Pyx_GOTREF(__pyx_t_1);
-      index = 1; __pyx_t_5 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_5)) goto __pyx_L5_unpacking_failed;
-      __Pyx_GOTREF(__pyx_t_5);
-      index = 2; __pyx_t_4 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_4)) goto __pyx_L5_unpacking_failed;
-      __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __pyx_t_9 = NULL;
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      goto __pyx_L6_unpacking_done;
-      __pyx_L5_unpacking_failed:;
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_9 = NULL;
-      if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __pyx_L6_unpacking_done:;
-    }
-    __Pyx_XDECREF_SET(__pyx_v_x0i, __pyx_t_1);
-    __pyx_t_1 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_y0i, __pyx_t_5);
-    __pyx_t_5 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_z0i, __pyx_t_4);
-    __pyx_t_4 = 0;
-
-    /* "solar_system_derivative.pyx":23
- *     w0 = np.array([], dtype=np.double)
- *     for x0i, y0i, z0i in zip(x0, y0, z0):
- *         w0 = np.concatenate([w0, [x0i], [y0i], [z0i]])             # <<<<<<<<<<<<<<
- *     for vx0i, vy0i, vz0i in zip(vx0, vy0, vz0):
- *         w0 = np.concatenate([w0, [vx0i], [vy0i], [vz0i]])
- */
-    __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_concatenate); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_INCREF(__pyx_v_x0i);
-    __Pyx_GIVEREF(__pyx_v_x0i);
-    PyList_SET_ITEM(__pyx_t_4, 0, __pyx_v_x0i);
-    __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_INCREF(__pyx_v_y0i);
-    __Pyx_GIVEREF(__pyx_v_y0i);
-    PyList_SET_ITEM(__pyx_t_1, 0, __pyx_v_y0i);
-    __pyx_t_8 = PyList_New(1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_INCREF(__pyx_v_z0i);
-    __Pyx_GIVEREF(__pyx_v_z0i);
-    PyList_SET_ITEM(__pyx_t_8, 0, __pyx_v_z0i);
-    __pyx_t_10 = PyList_New(4); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_INCREF(__pyx_v_w0);
-    __Pyx_GIVEREF(__pyx_v_w0);
-    PyList_SET_ITEM(__pyx_t_10, 0, __pyx_v_w0);
-    __Pyx_GIVEREF(__pyx_t_4);
-    PyList_SET_ITEM(__pyx_t_10, 1, __pyx_t_4);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyList_SET_ITEM(__pyx_t_10, 2, __pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_8);
-    PyList_SET_ITEM(__pyx_t_10, 3, __pyx_t_8);
-    __pyx_t_4 = 0;
-    __pyx_t_1 = 0;
-    __pyx_t_8 = 0;
-    __pyx_t_8 = NULL;
-    if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_5))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_5);
-      if (likely(__pyx_t_8)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
-        __Pyx_INCREF(__pyx_t_8);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_5, function);
-      }
-    }
-    if (!__pyx_t_8) {
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_10); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
-    } else {
-      __pyx_t_1 = PyTuple_New(1+1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_8); __pyx_t_8 = NULL;
-      __Pyx_GIVEREF(__pyx_t_10);
-      PyTuple_SET_ITEM(__pyx_t_1, 0+1, __pyx_t_10);
-      __pyx_t_10 = 0;
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF_SET(__pyx_v_w0, __pyx_t_3);
-    __pyx_t_3 = 0;
-
-    /* "solar_system_derivative.pyx":22
- * cpdef get_w0():
- *     w0 = np.array([], dtype=np.double)
- *     for x0i, y0i, z0i in zip(x0, y0, z0):             # <<<<<<<<<<<<<<
- *         w0 = np.concatenate([w0, [x0i], [y0i], [z0i]])
- *     for vx0i, vy0i, vz0i in zip(vx0, vy0, vz0):
- */
-  }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "solar_system_derivative.pyx":24
- *     for x0i, y0i, z0i in zip(x0, y0, z0):
- *         w0 = np.concatenate([w0, [x0i], [y0i], [z0i]])
- *     for vx0i, vy0i, vz0i in zip(vx0, vy0, vz0):             # <<<<<<<<<<<<<<
- *         w0 = np.concatenate([w0, [vx0i], [vy0i], [vz0i]])
- *     return w0
- */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_vx0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_vy0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_vz0); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_t_5);
-  __pyx_t_2 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_1, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
-    __pyx_t_1 = __pyx_t_5; __Pyx_INCREF(__pyx_t_1); __pyx_t_6 = 0;
-    __pyx_t_7 = NULL;
-  } else {
-    __pyx_t_6 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  }
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  for (;;) {
-    if (likely(!__pyx_t_7)) {
-      if (likely(PyList_CheckExact(__pyx_t_1))) {
-        if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_1)) break;
-        #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_5 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_5); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        #else
-        __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(__pyx_t_5);
-        #endif
-      } else {
-        if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
-        #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_5); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        #else
-        __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(__pyx_t_5);
-        #endif
-      }
-    } else {
-      __pyx_t_5 = __pyx_t_7(__pyx_t_1);
-      if (unlikely(!__pyx_t_5)) {
-        PyObject* exc_type = PyErr_Occurred();
-        if (exc_type) {
-          if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        }
-        break;
-      }
-      __Pyx_GOTREF(__pyx_t_5);
-    }
-    if ((likely(PyTuple_CheckExact(__pyx_t_5))) || (PyList_CheckExact(__pyx_t_5))) {
-      PyObject* sequence = __pyx_t_5;
-      #if CYTHON_COMPILING_IN_CPYTHON
-      Py_ssize_t size = Py_SIZE(sequence);
-      #else
-      Py_ssize_t size = PySequence_Size(sequence);
-      #endif
-      if (unlikely(size != 3)) {
-        if (size > 3) __Pyx_RaiseTooManyValuesError(3);
-        else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      }
-      #if CYTHON_COMPILING_IN_CPYTHON
-      if (likely(PyTuple_CheckExact(sequence))) {
-        __pyx_t_3 = PyTuple_GET_ITEM(sequence, 0); 
-        __pyx_t_2 = PyTuple_GET_ITEM(sequence, 1); 
-        __pyx_t_10 = PyTuple_GET_ITEM(sequence, 2); 
-      } else {
-        __pyx_t_3 = PyList_GET_ITEM(sequence, 0); 
-        __pyx_t_2 = PyList_GET_ITEM(sequence, 1); 
-        __pyx_t_10 = PyList_GET_ITEM(sequence, 2); 
-      }
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_10);
-      #else
-      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_10 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_10);
-      #endif
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    } else {
-      Py_ssize_t index = -1;
-      __pyx_t_8 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext;
-      index = 0; __pyx_t_3 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_3)) goto __pyx_L9_unpacking_failed;
-      __Pyx_GOTREF(__pyx_t_3);
-      index = 1; __pyx_t_2 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_2)) goto __pyx_L9_unpacking_failed;
-      __Pyx_GOTREF(__pyx_t_2);
-      index = 2; __pyx_t_10 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_10)) goto __pyx_L9_unpacking_failed;
-      __Pyx_GOTREF(__pyx_t_10);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __pyx_t_9 = NULL;
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      goto __pyx_L10_unpacking_done;
-      __pyx_L9_unpacking_failed:;
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_9 = NULL;
-      if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __pyx_L10_unpacking_done:;
-    }
-    __Pyx_XDECREF_SET(__pyx_v_vx0i, __pyx_t_3);
-    __pyx_t_3 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_vy0i, __pyx_t_2);
-    __pyx_t_2 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_vz0i, __pyx_t_10);
-    __pyx_t_10 = 0;
-
-    /* "solar_system_derivative.pyx":25
- *         w0 = np.concatenate([w0, [x0i], [y0i], [z0i]])
- *     for vx0i, vy0i, vz0i in zip(vx0, vy0, vz0):
- *         w0 = np.concatenate([w0, [vx0i], [vy0i], [vz0i]])             # <<<<<<<<<<<<<<
- *     return w0
- * 
- */
-    __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_concatenate); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_10 = PyList_New(1); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_INCREF(__pyx_v_vx0i);
-    __Pyx_GIVEREF(__pyx_v_vx0i);
-    PyList_SET_ITEM(__pyx_t_10, 0, __pyx_v_vx0i);
-    __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_INCREF(__pyx_v_vy0i);
-    __Pyx_GIVEREF(__pyx_v_vy0i);
-    PyList_SET_ITEM(__pyx_t_3, 0, __pyx_v_vy0i);
-    __pyx_t_8 = PyList_New(1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_8);
-    __Pyx_INCREF(__pyx_v_vz0i);
-    __Pyx_GIVEREF(__pyx_v_vz0i);
-    PyList_SET_ITEM(__pyx_t_8, 0, __pyx_v_vz0i);
-    __pyx_t_4 = PyList_New(4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_INCREF(__pyx_v_w0);
-    __Pyx_GIVEREF(__pyx_v_w0);
-    PyList_SET_ITEM(__pyx_t_4, 0, __pyx_v_w0);
-    __Pyx_GIVEREF(__pyx_t_10);
-    PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_10);
-    __Pyx_GIVEREF(__pyx_t_3);
-    PyList_SET_ITEM(__pyx_t_4, 2, __pyx_t_3);
-    __Pyx_GIVEREF(__pyx_t_8);
-    PyList_SET_ITEM(__pyx_t_4, 3, __pyx_t_8);
-    __pyx_t_10 = 0;
-    __pyx_t_3 = 0;
-    __pyx_t_8 = 0;
-    __pyx_t_8 = NULL;
-    if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_2);
-      if (likely(__pyx_t_8)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_8);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
-      }
-    }
-    if (!__pyx_t_8) {
-      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_5);
-    } else {
-      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_8); __pyx_t_8 = NULL;
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_4);
-      __pyx_t_4 = 0;
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF_SET(__pyx_v_w0, __pyx_t_5);
-    __pyx_t_5 = 0;
-
-    /* "solar_system_derivative.pyx":24
- *     for x0i, y0i, z0i in zip(x0, y0, z0):
- *         w0 = np.concatenate([w0, [x0i], [y0i], [z0i]])
- *     for vx0i, vy0i, vz0i in zip(vx0, vy0, vz0):             # <<<<<<<<<<<<<<
- *         w0 = np.concatenate([w0, [vx0i], [vy0i], [vz0i]])
- *     return w0
- */
-  }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "solar_system_derivative.pyx":26
- *     for vx0i, vy0i, vz0i in zip(vx0, vy0, vz0):
- *         w0 = np.concatenate([w0, [vx0i], [vy0i], [vz0i]])
- *     return w0             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(__pyx_v_w0);
-  __pyx_r = __pyx_v_w0;
-  goto __pyx_L0;
-
-  /* "solar_system_derivative.pyx":20
- * 
- * 
- * cpdef get_w0():             # <<<<<<<<<<<<<<
- *     w0 = np.array([], dtype=np.double)
- *     for x0i, y0i, z0i in zip(x0, y0, z0):
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("solar_system_derivative.get_w0", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  __Pyx_XDECREF(__pyx_v_w0);
-  __Pyx_XDECREF(__pyx_v_x0i);
-  __Pyx_XDECREF(__pyx_v_y0i);
-  __Pyx_XDECREF(__pyx_v_z0i);
-  __Pyx_XDECREF(__pyx_v_vx0i);
-  __Pyx_XDECREF(__pyx_v_vy0i);
-  __Pyx_XDECREF(__pyx_v_vz0i);
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_23solar_system_derivative_3get_w0(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_23solar_system_derivative_3get_w0(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("get_w0 (wrapper)", 0);
-  __pyx_r = __pyx_pf_23solar_system_derivative_2get_w0(__pyx_self);
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_23solar_system_derivative_2get_w0(CYTHON_UNUSED PyObject *__pyx_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("get_w0", 0);
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23solar_system_derivative_get_w0(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("solar_system_derivative.get_w0", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "solar_system_derivative.pyx":29
+/* "solar_system_energy.pyx":13
  * 
  * 
  * cdef double[::1] r(int i, double[::1] w):             # <<<<<<<<<<<<<<
@@ -2258,7 +1511,7 @@ static PyObject *__pyx_pf_23solar_system_derivative_2get_w0(CYTHON_UNUSED PyObje
  *         int start_index, end_index
  */
 
-static __Pyx_memviewslice __pyx_f_23solar_system_derivative_r(int __pyx_v_i, __Pyx_memviewslice __pyx_v_w) {
+static __Pyx_memviewslice __pyx_f_19solar_system_energy_r(int __pyx_v_i, __Pyx_memviewslice __pyx_v_w) {
   int __pyx_v_start_index;
   int __pyx_v_end_index;
   __Pyx_memviewslice __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -2270,25 +1523,25 @@ static __Pyx_memviewslice __pyx_f_23solar_system_derivative_r(int __pyx_v_i, __P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("r", 0);
 
-  /* "solar_system_derivative.pyx":32
+  /* "solar_system_energy.pyx":16
  *     cdef:
  *         int start_index, end_index
  *     start_index = i * number_dimensions             # <<<<<<<<<<<<<<
  *     end_index = (i + 1) * number_dimensions
  *     return w[start_index:end_index]
  */
-  __pyx_v_start_index = (__pyx_v_i * __pyx_v_23solar_system_derivative_number_dimensions);
+  __pyx_v_start_index = (__pyx_v_i * __pyx_v_19solar_system_energy_number_dimensions);
 
-  /* "solar_system_derivative.pyx":33
+  /* "solar_system_energy.pyx":17
  *         int start_index, end_index
  *     start_index = i * number_dimensions
  *     end_index = (i + 1) * number_dimensions             # <<<<<<<<<<<<<<
  *     return w[start_index:end_index]
  * 
  */
-  __pyx_v_end_index = ((__pyx_v_i + 1) * __pyx_v_23solar_system_derivative_number_dimensions);
+  __pyx_v_end_index = ((__pyx_v_i + 1) * __pyx_v_19solar_system_energy_number_dimensions);
 
-  /* "solar_system_derivative.pyx":34
+  /* "solar_system_energy.pyx":18
  *     start_index = i * number_dimensions
  *     end_index = (i + 1) * number_dimensions
  *     return w[start_index:end_index]             # <<<<<<<<<<<<<<
@@ -2313,7 +1566,7 @@ static __Pyx_memviewslice __pyx_f_23solar_system_derivative_r(int __pyx_v_i, __P
     0,
     1) < 0))
 {
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 }
 
 __pyx_r = __pyx_t_1;
@@ -2321,7 +1574,7 @@ __pyx_r = __pyx_t_1;
   __pyx_t_1.data = NULL;
   goto __pyx_L0;
 
-  /* "solar_system_derivative.pyx":29
+  /* "solar_system_energy.pyx":13
  * 
  * 
  * cdef double[::1] r(int i, double[::1] w):             # <<<<<<<<<<<<<<
@@ -2334,7 +1587,7 @@ __pyx_r = __pyx_t_1;
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("solar_system_derivative.r", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("solar_system_energy.r", __pyx_clineno, __pyx_lineno, __pyx_filename);
 
   goto __pyx_L2;
   __pyx_L0:;
@@ -2346,24 +1599,25 @@ __pyx_r = __pyx_t_1;
   return __pyx_r;
 }
 
-/* "solar_system_derivative.pyx":42
- *     double c[3]
- *     double[::1] g_central_force_ij = c
- * cdef void calc_central_force(int i, int j, double[::1] w):             # <<<<<<<<<<<<<<
+/* "solar_system_energy.pyx":24
+ *     double d[3]
+ *     double[::1] g_displacement = d
+ * cdef double calc_potential_energy(int i, int j, double[::1] position):             # <<<<<<<<<<<<<<
  *     cdef:
  *         double[::1] masses = g_masses
  */
 
-static void __pyx_f_23solar_system_derivative_calc_central_force(int __pyx_v_i, int __pyx_v_j, __Pyx_memviewslice __pyx_v_w) {
+static double __pyx_f_19solar_system_energy_calc_potential_energy(int __pyx_v_i, int __pyx_v_j, __Pyx_memviewslice __pyx_v_position) {
   __Pyx_memviewslice __pyx_v_masses = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_displacement = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_central_force_ij = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_rj = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_ri = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_v_mj;
   double __pyx_v_mag_displacement;
-  double __pyx_v_force_coefficient;
+  double __pyx_v_potential_energy;
   int __pyx_v_k;
+  PyObject *__pyx_v_mi = NULL;
+  double __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_t_2;
@@ -2375,90 +1629,91 @@ static void __pyx_f_23solar_system_derivative_calc_central_force(int __pyx_v_i, 
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
   Py_ssize_t __pyx_t_10;
-  Py_ssize_t __pyx_t_11;
+  PyObject *__pyx_t_11 = NULL;
+  PyObject *__pyx_t_12 = NULL;
+  PyObject *__pyx_t_13 = NULL;
+  double __pyx_t_14;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("calc_central_force", 0);
+  __Pyx_RefNannySetupContext("calc_potential_energy", 0);
 
-  /* "solar_system_derivative.pyx":44
- * cdef void calc_central_force(int i, int j, double[::1] w):
+  /* "solar_system_energy.pyx":26
+ * cdef double calc_potential_energy(int i, int j, double[::1] position):
  *     cdef:
  *         double[::1] masses = g_masses             # <<<<<<<<<<<<<<
  *         double[::1] displacement = g_displacement
- *         double[::1] central_force_ij = g_central_force_ij
+ *         double[::1] rj = r(j, position)
  */
-  if (unlikely(!__pyx_v_23solar_system_derivative_g_masses.memview)) { __Pyx_RaiseUnboundLocalError("g_masses"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
-  __PYX_INC_MEMVIEW(&__pyx_v_23solar_system_derivative_g_masses, 0);
-  __pyx_v_masses = __pyx_v_23solar_system_derivative_g_masses;
+  if (unlikely(!__pyx_v_19solar_system_energy_g_masses.memview)) { __Pyx_RaiseUnboundLocalError("g_masses"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
+  __PYX_INC_MEMVIEW(&__pyx_v_19solar_system_energy_g_masses, 0);
+  __pyx_v_masses = __pyx_v_19solar_system_energy_g_masses;
 
-  /* "solar_system_derivative.pyx":45
+  /* "solar_system_energy.pyx":27
  *     cdef:
  *         double[::1] masses = g_masses
  *         double[::1] displacement = g_displacement             # <<<<<<<<<<<<<<
- *         double[::1] central_force_ij = g_central_force_ij
- *         double[::1] rj = r(j, w)
+ *         double[::1] rj = r(j, position)
+ *         double[::1] ri = r(i, position)
  */
-  if (unlikely(!__pyx_v_23solar_system_derivative_g_displacement.memview)) { __Pyx_RaiseUnboundLocalError("g_displacement"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
-  __PYX_INC_MEMVIEW(&__pyx_v_23solar_system_derivative_g_displacement, 0);
-  __pyx_v_displacement = __pyx_v_23solar_system_derivative_g_displacement;
+  if (unlikely(!__pyx_v_19solar_system_energy_g_displacement.memview)) { __Pyx_RaiseUnboundLocalError("g_displacement"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
+  __PYX_INC_MEMVIEW(&__pyx_v_19solar_system_energy_g_displacement, 0);
+  __pyx_v_displacement = __pyx_v_19solar_system_energy_g_displacement;
 
-  /* "solar_system_derivative.pyx":46
+  /* "solar_system_energy.pyx":28
  *         double[::1] masses = g_masses
  *         double[::1] displacement = g_displacement
- *         double[::1] central_force_ij = g_central_force_ij             # <<<<<<<<<<<<<<
- *         double[::1] rj = r(j, w)
- *         double[::1] ri = r(i, w)
- */
-  if (unlikely(!__pyx_v_23solar_system_derivative_g_central_force_ij.memview)) { __Pyx_RaiseUnboundLocalError("g_central_force_ij"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
-  __PYX_INC_MEMVIEW(&__pyx_v_23solar_system_derivative_g_central_force_ij, 0);
-  __pyx_v_central_force_ij = __pyx_v_23solar_system_derivative_g_central_force_ij;
-
-  /* "solar_system_derivative.pyx":47
- *         double[::1] displacement = g_displacement
- *         double[::1] central_force_ij = g_central_force_ij
- *         double[::1] rj = r(j, w)             # <<<<<<<<<<<<<<
- *         double[::1] ri = r(i, w)
+ *         double[::1] rj = r(j, position)             # <<<<<<<<<<<<<<
+ *         double[::1] ri = r(i, position)
  * 
  */
-  __pyx_t_1 = __pyx_f_23solar_system_derivative_r(__pyx_v_j, __pyx_v_w); if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_19solar_system_energy_r(__pyx_v_j, __pyx_v_position); if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_rj = __pyx_t_1;
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "solar_system_derivative.pyx":48
- *         double[::1] central_force_ij = g_central_force_ij
- *         double[::1] rj = r(j, w)
- *         double[::1] ri = r(i, w)             # <<<<<<<<<<<<<<
+  /* "solar_system_energy.pyx":29
+ *         double[::1] displacement = g_displacement
+ *         double[::1] rj = r(j, position)
+ *         double[::1] ri = r(i, position)             # <<<<<<<<<<<<<<
  * 
  *         double mj, mag_displacement = 0
  */
-  __pyx_t_1 = __pyx_f_23solar_system_derivative_r(__pyx_v_i, __pyx_v_w); if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_19solar_system_energy_r(__pyx_v_i, __pyx_v_position); if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_ri = __pyx_t_1;
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "solar_system_derivative.pyx":50
- *         double[::1] ri = r(i, w)
+  /* "solar_system_energy.pyx":31
+ *         double[::1] ri = r(i, position)
  * 
  *         double mj, mag_displacement = 0             # <<<<<<<<<<<<<<
- *         double force_coefficient
+ *         double potential_energy = 0
  *         int k
  */
   __pyx_v_mag_displacement = 0.0;
 
-  /* "solar_system_derivative.pyx":55
+  /* "solar_system_energy.pyx":32
+ * 
+ *         double mj, mag_displacement = 0
+ *         double potential_energy = 0             # <<<<<<<<<<<<<<
+ *         int k
+ * 
+ */
+  __pyx_v_potential_energy = 0.0;
+
+  /* "solar_system_energy.pyx":36
  * 
  *     # exerted on i by j
  *     for k in range(number_dimensions):             # <<<<<<<<<<<<<<
  *         displacement[k] = rj[k] - ri[k]
  * 
  */
-  __pyx_t_2 = __pyx_v_23solar_system_derivative_number_dimensions;
+  __pyx_t_2 = __pyx_v_19solar_system_energy_number_dimensions;
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_k = __pyx_t_3;
 
-    /* "solar_system_derivative.pyx":56
+    /* "solar_system_energy.pyx":37
  *     # exerted on i by j
  *     for k in range(number_dimensions):
  *         displacement[k] = rj[k] - ri[k]             # <<<<<<<<<<<<<<
@@ -2471,18 +1726,18 @@ static void __pyx_f_23solar_system_derivative_calc_central_force(int __pyx_v_i, 
     *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_displacement.data) + __pyx_t_6)) )) = ((*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_rj.data) + __pyx_t_4)) ))) - (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_ri.data) + __pyx_t_5)) ))));
   }
 
-  /* "solar_system_derivative.pyx":58
+  /* "solar_system_energy.pyx":39
  *         displacement[k] = rj[k] - ri[k]
  * 
  *     for k in range(number_dimensions):             # <<<<<<<<<<<<<<
  *         mag_displacement += displacement[k] * displacement[k]
  *     mag_displacement = sqrt(mag_displacement)
  */
-  __pyx_t_2 = __pyx_v_23solar_system_derivative_number_dimensions;
+  __pyx_t_2 = __pyx_v_19solar_system_energy_number_dimensions;
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_k = __pyx_t_3;
 
-    /* "solar_system_derivative.pyx":59
+    /* "solar_system_energy.pyx":40
  * 
  *     for k in range(number_dimensions):
  *         mag_displacement += displacement[k] * displacement[k]             # <<<<<<<<<<<<<<
@@ -2494,7 +1749,7 @@ static void __pyx_f_23solar_system_derivative_calc_central_force(int __pyx_v_i, 
     __pyx_v_mag_displacement = (__pyx_v_mag_displacement + ((*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_displacement.data) + __pyx_t_7)) ))) * (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_displacement.data) + __pyx_t_8)) )))));
   }
 
-  /* "solar_system_derivative.pyx":60
+  /* "solar_system_energy.pyx":41
  *     for k in range(number_dimensions):
  *         mag_displacement += displacement[k] * displacement[k]
  *     mag_displacement = sqrt(mag_displacement)             # <<<<<<<<<<<<<<
@@ -2503,88 +1758,104 @@ static void __pyx_f_23solar_system_derivative_calc_central_force(int __pyx_v_i, 
  */
   __pyx_v_mag_displacement = sqrt(__pyx_v_mag_displacement);
 
-  /* "solar_system_derivative.pyx":62
+  /* "solar_system_energy.pyx":43
  *     mag_displacement = sqrt(mag_displacement)
  * 
  *     mj = masses[j]             # <<<<<<<<<<<<<<
+ *     mi = masses[i]
  *     with cdivision:
- *         force_coefficient = G * mj / (pow(mag_displacement, 3) + 1)
  */
   __pyx_t_9 = __pyx_v_j;
   __pyx_v_mj = (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_masses.data) + __pyx_t_9)) )));
 
-  /* "solar_system_derivative.pyx":64
+  /* "solar_system_energy.pyx":44
+ * 
  *     mj = masses[j]
+ *     mi = masses[i]             # <<<<<<<<<<<<<<
  *     with cdivision:
- *         force_coefficient = G * mj / (pow(mag_displacement, 3) + 1)             # <<<<<<<<<<<<<<
- * 
- *     for k in range(number_dimensions):
+ *         potential_energy = - G * mj * mi / (mag_displacement + 1)
  */
-  __pyx_v_force_coefficient = ((__pyx_v_23solar_system_derivative_G * __pyx_v_mj) / (pow(__pyx_v_mag_displacement, 3.0) + 1.0));
+  __pyx_t_10 = __pyx_v_i;
+  __pyx_t_11 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_masses.data) + __pyx_t_10)) )))); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_11);
+  __pyx_v_mi = __pyx_t_11;
+  __pyx_t_11 = 0;
 
-  /* "solar_system_derivative.pyx":66
- *         force_coefficient = G * mj / (pow(mag_displacement, 3) + 1)
- * 
- *     for k in range(number_dimensions):             # <<<<<<<<<<<<<<
- *         central_force_ij[k] = force_coefficient * displacement[k]
- * 
- */
-  __pyx_t_2 = __pyx_v_23solar_system_derivative_number_dimensions;
-  for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
-    __pyx_v_k = __pyx_t_3;
-
-    /* "solar_system_derivative.pyx":67
- * 
- *     for k in range(number_dimensions):
- *         central_force_ij[k] = force_coefficient * displacement[k]             # <<<<<<<<<<<<<<
- * 
+  /* "solar_system_energy.pyx":46
+ *     mi = masses[i]
+ *     with cdivision:
+ *         potential_energy = - G * mj * mi / (mag_displacement + 1)             # <<<<<<<<<<<<<<
+ *     return potential_energy
  * 
  */
-    __pyx_t_10 = __pyx_v_k;
-    __pyx_t_11 = __pyx_v_k;
-    *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_central_force_ij.data) + __pyx_t_11)) )) = (__pyx_v_force_coefficient * (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_displacement.data) + __pyx_t_10)) ))));
-  }
+  __pyx_t_11 = PyFloat_FromDouble(((-__pyx_v_19solar_system_energy_G) * __pyx_v_mj)); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_11);
+  __pyx_t_12 = PyNumber_Multiply(__pyx_t_11, __pyx_v_mi); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_12);
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  __pyx_t_11 = PyFloat_FromDouble((__pyx_v_mag_displacement + 1.0)); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_11);
+  __pyx_t_13 = __Pyx_PyNumber_Divide(__pyx_t_12, __pyx_t_11); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_13);
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_t_13); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  __pyx_v_potential_energy = __pyx_t_14;
 
-  /* "solar_system_derivative.pyx":42
- *     double c[3]
- *     double[::1] g_central_force_ij = c
- * cdef void calc_central_force(int i, int j, double[::1] w):             # <<<<<<<<<<<<<<
+  /* "solar_system_energy.pyx":47
+ *     with cdivision:
+ *         potential_energy = - G * mj * mi / (mag_displacement + 1)
+ *     return potential_energy             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __pyx_r = __pyx_v_potential_energy;
+  goto __pyx_L0;
+
+  /* "solar_system_energy.pyx":24
+ *     double d[3]
+ *     double[::1] g_displacement = d
+ * cdef double calc_potential_energy(int i, int j, double[::1] position):             # <<<<<<<<<<<<<<
  *     cdef:
  *         double[::1] masses = g_masses
  */
 
   /* function exit code */
-  goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
-  __Pyx_WriteUnraisable("solar_system_derivative.calc_central_force", __pyx_clineno, __pyx_lineno, __pyx_filename, 0, 0);
+  __Pyx_XDECREF(__pyx_t_11);
+  __Pyx_XDECREF(__pyx_t_12);
+  __Pyx_XDECREF(__pyx_t_13);
+  __Pyx_WriteUnraisable("solar_system_energy.calc_potential_energy", __pyx_clineno, __pyx_lineno, __pyx_filename, 0, 0);
+  __pyx_r = 0;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_masses, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_displacement, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_central_force_ij, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_rj, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_ri, 1);
+  __Pyx_XDECREF(__pyx_v_mi);
   __Pyx_RefNannyFinishContext();
+  return __pyx_r;
 }
 
-/* "solar_system_derivative.pyx":70
+/* "solar_system_energy.pyx":50
  * 
  * 
- * cdef double[::1] f_core(double[::1] w):             # <<<<<<<<<<<<<<
+ * cdef double[::1] total_potential_energy(double[:, ::1] w, int time_points):             # <<<<<<<<<<<<<<
  *     cdef:
- *         double[::1] central_force_ij = g_central_force_ij
+ *         double[::1] potential_energy = np.zeros(time_points, dtype=np.double)
  */
 
-static __Pyx_memviewslice __pyx_f_23solar_system_derivative_f_core(__Pyx_memviewslice __pyx_v_w) {
-  __Pyx_memviewslice __pyx_v_central_force_ij = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_v_w_ = { 0, 0, { 0 }, { 0 }, { 0 } };
-  double __pyx_v_p[3];
-  __Pyx_memviewslice __pyx_v_particle_force = { 0, 0, { 0 }, { 0 }, { 0 } };
+static __Pyx_memviewslice __pyx_f_19solar_system_energy_total_potential_energy(__Pyx_memviewslice __pyx_v_w, int __pyx_v_time_points) {
+  __Pyx_memviewslice __pyx_v_potential_energy = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_positions = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_v_start;
   int __pyx_v_i;
   int __pyx_v_j;
-  int __pyx_v_start_index;
-  int __pyx_v_end_index;
+  int __pyx_v_k;
+  CYTHON_UNUSED int __pyx_v_start_index;
+  CYTHON_UNUSED int __pyx_v_end_index;
   __Pyx_memviewslice __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2592,168 +1863,90 @@ static __Pyx_memviewslice __pyx_f_23solar_system_derivative_f_core(__Pyx_memview
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  Py_ssize_t __pyx_t_6;
-  PyObject *__pyx_t_7 = NULL;
-  __Pyx_memviewslice __pyx_t_8 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  struct __pyx_array_obj *__pyx_t_9 = NULL;
+  __Pyx_memviewslice __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_t_7 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_t_10;
-  __Pyx_memviewslice __pyx_t_11 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_t_11;
   int __pyx_t_12;
   int __pyx_t_13;
-  int __pyx_t_14;
-  Py_ssize_t __pyx_t_15;
-  Py_ssize_t __pyx_t_16;
-  Py_ssize_t __pyx_t_17;
-  Py_ssize_t __pyx_t_18;
-  Py_ssize_t __pyx_t_19;
-  Py_ssize_t __pyx_t_20;
-  Py_ssize_t __pyx_t_21;
-  Py_ssize_t __pyx_t_22;
-  Py_ssize_t __pyx_t_23;
-  Py_ssize_t __pyx_t_24;
-  Py_ssize_t __pyx_t_25;
-  Py_ssize_t __pyx_t_26;
-  __Pyx_memviewslice __pyx_t_27 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  Py_ssize_t __pyx_t_14;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("f_core", 0);
+  __Pyx_RefNannySetupContext("total_potential_energy", 0);
 
-  /* "solar_system_derivative.pyx":72
- * cdef double[::1] f_core(double[::1] w):
+  /* "solar_system_energy.pyx":52
+ * cdef double[::1] total_potential_energy(double[:, ::1] w, int time_points):
  *     cdef:
- *         double[::1] central_force_ij = g_central_force_ij             # <<<<<<<<<<<<<<
- *         double[::1] w_ = np.zeros(2 * number_dimensions * number_particles, np.double)
- *         double p[3]
+ *         double[::1] potential_energy = np.zeros(time_points, dtype=np.double)             # <<<<<<<<<<<<<<
+ * 
+ *         double[:, ::1] positions
  */
-  if (unlikely(!__pyx_v_23solar_system_derivative_g_central_force_ij.memview)) { __Pyx_RaiseUnboundLocalError("g_central_force_ij"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
-  __PYX_INC_MEMVIEW(&__pyx_v_23solar_system_derivative_g_central_force_ij, 0);
-  __pyx_v_central_force_ij = __pyx_v_23solar_system_derivative_g_central_force_ij;
-
-  /* "solar_system_derivative.pyx":73
- *     cdef:
- *         double[::1] central_force_ij = g_central_force_ij
- *         double[::1] w_ = np.zeros(2 * number_dimensions * number_particles, np.double)             # <<<<<<<<<<<<<<
- *         double p[3]
- *         double[::1] particle_force = p
- */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_time_points); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long(((2 * __pyx_v_23solar_system_derivative_number_dimensions) * __pyx_v_23solar_system_derivative_number_particles)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
+  __pyx_t_1 = 0;
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = NULL;
-  __pyx_t_6 = 0;
-  if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_4)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_4);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-      __pyx_t_6 = 1;
-    }
-  }
-  __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_7);
-  if (__pyx_t_4) {
-    __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4); __pyx_t_4 = NULL;
-  }
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_6, __pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_t_5);
-  __pyx_t_2 = 0;
-  __pyx_t_5 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(__pyx_t_1);
-  if (unlikely(!__pyx_t_8.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_w_ = __pyx_t_8;
-  __pyx_t_8.memview = NULL;
-  __pyx_t_8.data = NULL;
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(__pyx_t_5);
+  if (unlikely(!__pyx_t_6.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_v_potential_energy = __pyx_t_6;
+  __pyx_t_6.memview = NULL;
+  __pyx_t_6.data = NULL;
 
-  /* "solar_system_derivative.pyx":75
- *         double[::1] w_ = np.zeros(2 * number_dimensions * number_particles, np.double)
- *         double p[3]
- *         double[::1] particle_force = p             # <<<<<<<<<<<<<<
- * 
- *         int v_start = number_dimensions * number_particles
- */
-  __pyx_t_3 = __pyx_format_from_typeinfo(&__Pyx_TypeInfo_double);
-  __pyx_t_1 = Py_BuildValue((char*) "("  __PYX_BUILD_PY_SSIZE_T  ")", ((Py_ssize_t)3));
-  if (unlikely(!__pyx_t_3 || !__pyx_t_1 || !PyBytes_AsString(__pyx_t_3))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = __pyx_array_new(__pyx_t_1, sizeof(double), PyBytes_AS_STRING(__pyx_t_3), (char *) "fortran", (char *) __pyx_v_p);
-  if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_9);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(((PyObject *)__pyx_t_9));
-  if (unlikely(!__pyx_t_8.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(((PyObject *)__pyx_t_9)); __pyx_t_9 = 0;
-  __pyx_v_particle_force = __pyx_t_8;
-  __pyx_t_8.memview = NULL;
-  __pyx_t_8.data = NULL;
-
-  /* "solar_system_derivative.pyx":77
- *         double[::1] particle_force = p
+  /* "solar_system_energy.pyx":56
+ *         double[:, ::1] positions
  * 
  *         int v_start = number_dimensions * number_particles             # <<<<<<<<<<<<<<
- *         int i, j, start_index, end_index
+ *         int i, j, k, start_index, end_index
  * 
  */
-  __pyx_v_v_start = (__pyx_v_23solar_system_derivative_number_dimensions * __pyx_v_23solar_system_derivative_number_particles);
+  __pyx_v_v_start = (__pyx_v_19solar_system_energy_number_dimensions * __pyx_v_19solar_system_energy_number_particles);
 
-  /* "solar_system_derivative.pyx":80
- *         int i, j, start_index, end_index
+  /* "solar_system_energy.pyx":59
+ *         int i, j, k, start_index, end_index
  * 
- *     w_[:v_start] = w[v_start:]             # <<<<<<<<<<<<<<
- *     for i in range(number_particles):
- *         particle_force[...] = 0
+ *     positions = w[:, :v_start]             # <<<<<<<<<<<<<<
+ *     for k in range(time_points):
+ *         for i in range(number_particles):
  */
-  __pyx_t_8.data = __pyx_v_w.data;
-  __pyx_t_8.memview = __pyx_v_w.memview;
-  __PYX_INC_MEMVIEW(&__pyx_t_8, 0);
-  __pyx_t_10 = -1;
+  __pyx_t_7.data = __pyx_v_w.data;
+  __pyx_t_7.memview = __pyx_v_w.memview;
+  __PYX_INC_MEMVIEW(&__pyx_t_7, 0);
+  __pyx_t_7.shape[0] = __pyx_v_w.shape[0];
+__pyx_t_7.strides[0] = __pyx_v_w.strides[0];
+    __pyx_t_7.suboffsets[0] = -1;
+
+__pyx_t_8 = -1;
   if (unlikely(__pyx_memoryview_slice_memviewslice(
+    &__pyx_t_7,
+    __pyx_v_w.shape[1], __pyx_v_w.strides[1], __pyx_v_w.suboffsets[1],
+    1,
+    1,
     &__pyx_t_8,
-    __pyx_v_w.shape[0], __pyx_v_w.strides[0], __pyx_v_w.suboffsets[0],
-    0,
-    0,
-    &__pyx_t_10,
-    __pyx_v_v_start,
-    0,
-    0,
-    1,
-    0,
-    0,
-    1) < 0))
-{
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-}
-
-__pyx_t_11.data = __pyx_v_w_.data;
-  __pyx_t_11.memview = __pyx_v_w_.memview;
-  __PYX_INC_MEMVIEW(&__pyx_t_11, 0);
-  __pyx_t_10 = -1;
-  if (unlikely(__pyx_memoryview_slice_memviewslice(
-    &__pyx_t_11,
-    __pyx_v_w_.shape[0], __pyx_v_w_.strides[0], __pyx_v_w_.suboffsets[0],
-    0,
-    0,
-    &__pyx_t_10,
     0,
     __pyx_v_v_start,
     0,
@@ -2762,227 +1955,115 @@ __pyx_t_11.data = __pyx_v_w_.data;
     0,
     1) < 0))
 {
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 }
 
-if (unlikely(__pyx_memoryview_copy_contents(__pyx_t_8, __pyx_t_11, 1, 1, 0) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_8, 1);
+__pyx_v_positions = __pyx_t_7;
+  __pyx_t_7.memview = NULL;
+  __pyx_t_7.data = NULL;
 
-  /* "solar_system_derivative.pyx":81
+  /* "solar_system_energy.pyx":60
  * 
- *     w_[:v_start] = w[v_start:]
- *     for i in range(number_particles):             # <<<<<<<<<<<<<<
- *         particle_force[...] = 0
+ *     positions = w[:, :v_start]
+ *     for k in range(time_points):             # <<<<<<<<<<<<<<
+ *         for i in range(number_particles):
+ *             start_index = i * number_dimensions
+ */
+  __pyx_t_8 = __pyx_v_time_points;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v_k = __pyx_t_9;
+
+    /* "solar_system_energy.pyx":61
+ *     positions = w[:, :v_start]
+ *     for k in range(time_points):
+ *         for i in range(number_particles):             # <<<<<<<<<<<<<<
+ *             start_index = i * number_dimensions
+ *             end_index = (i + 1) * number_dimensions
+ */
+    __pyx_t_10 = __pyx_v_19solar_system_energy_number_particles;
+    for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
+      __pyx_v_i = __pyx_t_11;
+
+      /* "solar_system_energy.pyx":62
+ *     for k in range(time_points):
+ *         for i in range(number_particles):
+ *             start_index = i * number_dimensions             # <<<<<<<<<<<<<<
+ *             end_index = (i + 1) * number_dimensions
+ *             for j in range(i + 1, number_particles):
+ */
+      __pyx_v_start_index = (__pyx_v_i * __pyx_v_19solar_system_energy_number_dimensions);
+
+      /* "solar_system_energy.pyx":63
+ *         for i in range(number_particles):
+ *             start_index = i * number_dimensions
+ *             end_index = (i + 1) * number_dimensions             # <<<<<<<<<<<<<<
+ *             for j in range(i + 1, number_particles):
+ *                 potential_energy[k] += calc_potential_energy(i, j, positions[k, :])
+ */
+      __pyx_v_end_index = ((__pyx_v_i + 1) * __pyx_v_19solar_system_energy_number_dimensions);
+
+      /* "solar_system_energy.pyx":64
+ *             start_index = i * number_dimensions
+ *             end_index = (i + 1) * number_dimensions
+ *             for j in range(i + 1, number_particles):             # <<<<<<<<<<<<<<
+ *                 potential_energy[k] += calc_potential_energy(i, j, positions[k, :])
  * 
  */
-  __pyx_t_10 = __pyx_v_23solar_system_derivative_number_particles;
-  for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_10; __pyx_t_12+=1) {
-    __pyx_v_i = __pyx_t_12;
+      __pyx_t_12 = __pyx_v_19solar_system_energy_number_particles;
+      for (__pyx_t_13 = (__pyx_v_i + 1); __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
+        __pyx_v_j = __pyx_t_13;
 
-    /* "solar_system_derivative.pyx":82
- *     w_[:v_start] = w[v_start:]
- *     for i in range(number_particles):
- *         particle_force[...] = 0             # <<<<<<<<<<<<<<
+        /* "solar_system_energy.pyx":65
+ *             end_index = (i + 1) * number_dimensions
+ *             for j in range(i + 1, number_particles):
+ *                 potential_energy[k] += calc_potential_energy(i, j, positions[k, :])             # <<<<<<<<<<<<<<
  * 
- *         start_index = i * number_dimensions + v_start
+ *     return potential_energy
  */
-    {
-        double __pyx_temp_scalar = 0.0;
+        __pyx_t_6.data = __pyx_v_positions.data;
+        __pyx_t_6.memview = __pyx_v_positions.memview;
+        __PYX_INC_MEMVIEW(&__pyx_t_6, 0);
         {
-            Py_ssize_t __pyx_temp_extent = __pyx_v_particle_force.shape[0];
-            Py_ssize_t __pyx_temp_idx;
-            double *__pyx_temp_pointer = (double *) __pyx_v_particle_force.data;
-            for (__pyx_temp_idx = 0; __pyx_temp_idx < __pyx_temp_extent; __pyx_temp_idx++) {
-              *((double *) __pyx_temp_pointer) = __pyx_temp_scalar;
-              __pyx_temp_pointer += 1;
-            }
-        }
+    Py_ssize_t __pyx_tmp_idx = __pyx_v_k;
+    Py_ssize_t __pyx_tmp_shape = __pyx_v_positions.shape[0];
+    Py_ssize_t __pyx_tmp_stride = __pyx_v_positions.strides[0];
+    if (0 && (__pyx_tmp_idx < 0))
+        __pyx_tmp_idx += __pyx_tmp_shape;
+    if (0 && (__pyx_tmp_idx < 0 || __pyx_tmp_idx >= __pyx_tmp_shape)) {
+        PyErr_SetString(PyExc_IndexError, "Index out of bounds (axis 0)");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-
-    /* "solar_system_derivative.pyx":84
- *         particle_force[...] = 0
- * 
- *         start_index = i * number_dimensions + v_start             # <<<<<<<<<<<<<<
- *         end_index = (i + 1) * number_dimensions + v_start
- *         for j in range(0, i):
- */
-    __pyx_v_start_index = ((__pyx_v_i * __pyx_v_23solar_system_derivative_number_dimensions) + __pyx_v_v_start);
-
-    /* "solar_system_derivative.pyx":85
- * 
- *         start_index = i * number_dimensions + v_start
- *         end_index = (i + 1) * number_dimensions + v_start             # <<<<<<<<<<<<<<
- *         for j in range(0, i):
- *             calc_central_force(i, j, w)
- */
-    __pyx_v_end_index = (((__pyx_v_i + 1) * __pyx_v_23solar_system_derivative_number_dimensions) + __pyx_v_v_start);
-
-    /* "solar_system_derivative.pyx":86
- *         start_index = i * number_dimensions + v_start
- *         end_index = (i + 1) * number_dimensions + v_start
- *         for j in range(0, i):             # <<<<<<<<<<<<<<
- *             calc_central_force(i, j, w)
- *             particle_force[0] += central_force_ij[0]
- */
-    __pyx_t_13 = __pyx_v_i;
-    for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
-      __pyx_v_j = __pyx_t_14;
-
-      /* "solar_system_derivative.pyx":87
- *         end_index = (i + 1) * number_dimensions + v_start
- *         for j in range(0, i):
- *             calc_central_force(i, j, w)             # <<<<<<<<<<<<<<
- *             particle_force[0] += central_force_ij[0]
- *             particle_force[1] += central_force_ij[1]
- */
-      __pyx_f_23solar_system_derivative_calc_central_force(__pyx_v_i, __pyx_v_j, __pyx_v_w);
-
-      /* "solar_system_derivative.pyx":88
- *         for j in range(0, i):
- *             calc_central_force(i, j, w)
- *             particle_force[0] += central_force_ij[0]             # <<<<<<<<<<<<<<
- *             particle_force[1] += central_force_ij[1]
- *             particle_force[2] += central_force_ij[2]
- */
-      __pyx_t_15 = 0;
-      __pyx_t_16 = 0;
-      *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_particle_force.data) + __pyx_t_16)) )) += (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_central_force_ij.data) + __pyx_t_15)) )));
-
-      /* "solar_system_derivative.pyx":89
- *             calc_central_force(i, j, w)
- *             particle_force[0] += central_force_ij[0]
- *             particle_force[1] += central_force_ij[1]             # <<<<<<<<<<<<<<
- *             particle_force[2] += central_force_ij[2]
- *         for j in range(i + 1, number_particles):
- */
-      __pyx_t_17 = 1;
-      __pyx_t_18 = 1;
-      *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_particle_force.data) + __pyx_t_18)) )) += (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_central_force_ij.data) + __pyx_t_17)) )));
-
-      /* "solar_system_derivative.pyx":90
- *             particle_force[0] += central_force_ij[0]
- *             particle_force[1] += central_force_ij[1]
- *             particle_force[2] += central_force_ij[2]             # <<<<<<<<<<<<<<
- *         for j in range(i + 1, number_particles):
- *             calc_central_force(i, j, w)
- */
-      __pyx_t_19 = 2;
-      __pyx_t_20 = 2;
-      *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_particle_force.data) + __pyx_t_20)) )) += (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_central_force_ij.data) + __pyx_t_19)) )));
-    }
-
-    /* "solar_system_derivative.pyx":91
- *             particle_force[1] += central_force_ij[1]
- *             particle_force[2] += central_force_ij[2]
- *         for j in range(i + 1, number_particles):             # <<<<<<<<<<<<<<
- *             calc_central_force(i, j, w)
- *             particle_force[0] += central_force_ij[0]
- */
-    __pyx_t_13 = __pyx_v_23solar_system_derivative_number_particles;
-    for (__pyx_t_14 = (__pyx_v_i + 1); __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
-      __pyx_v_j = __pyx_t_14;
-
-      /* "solar_system_derivative.pyx":92
- *             particle_force[2] += central_force_ij[2]
- *         for j in range(i + 1, number_particles):
- *             calc_central_force(i, j, w)             # <<<<<<<<<<<<<<
- *             particle_force[0] += central_force_ij[0]
- *             particle_force[1] += central_force_ij[1]
- */
-      __pyx_f_23solar_system_derivative_calc_central_force(__pyx_v_i, __pyx_v_j, __pyx_v_w);
-
-      /* "solar_system_derivative.pyx":93
- *         for j in range(i + 1, number_particles):
- *             calc_central_force(i, j, w)
- *             particle_force[0] += central_force_ij[0]             # <<<<<<<<<<<<<<
- *             particle_force[1] += central_force_ij[1]
- *             particle_force[2] += central_force_ij[2]
- */
-      __pyx_t_21 = 0;
-      __pyx_t_22 = 0;
-      *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_particle_force.data) + __pyx_t_22)) )) += (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_central_force_ij.data) + __pyx_t_21)) )));
-
-      /* "solar_system_derivative.pyx":94
- *             calc_central_force(i, j, w)
- *             particle_force[0] += central_force_ij[0]
- *             particle_force[1] += central_force_ij[1]             # <<<<<<<<<<<<<<
- *             particle_force[2] += central_force_ij[2]
- *         w_[start_index:end_index] = particle_force[:]
- */
-      __pyx_t_23 = 1;
-      __pyx_t_24 = 1;
-      *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_particle_force.data) + __pyx_t_24)) )) += (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_central_force_ij.data) + __pyx_t_23)) )));
-
-      /* "solar_system_derivative.pyx":95
- *             particle_force[0] += central_force_ij[0]
- *             particle_force[1] += central_force_ij[1]
- *             particle_force[2] += central_force_ij[2]             # <<<<<<<<<<<<<<
- *         w_[start_index:end_index] = particle_force[:]
- *     return w_
- */
-      __pyx_t_25 = 2;
-      __pyx_t_26 = 2;
-      *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_particle_force.data) + __pyx_t_26)) )) += (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_central_force_ij.data) + __pyx_t_25)) )));
-    }
-
-    /* "solar_system_derivative.pyx":96
- *             particle_force[1] += central_force_ij[1]
- *             particle_force[2] += central_force_ij[2]
- *         w_[start_index:end_index] = particle_force[:]             # <<<<<<<<<<<<<<
- *     return w_
- * 
- */
-    __pyx_t_8.data = __pyx_v_particle_force.data;
-    __pyx_t_8.memview = __pyx_v_particle_force.memview;
-    __PYX_INC_MEMVIEW(&__pyx_t_8, 0);
-    __pyx_t_8.shape[0] = __pyx_v_particle_force.shape[0];
-__pyx_t_8.strides[0] = __pyx_v_particle_force.strides[0];
-    __pyx_t_8.suboffsets[0] = -1;
-
-__pyx_t_27.data = __pyx_v_w_.data;
-    __pyx_t_27.memview = __pyx_v_w_.memview;
-    __PYX_INC_MEMVIEW(&__pyx_t_27, 0);
-    __pyx_t_13 = -1;
-    if (unlikely(__pyx_memoryview_slice_memviewslice(
-    &__pyx_t_27,
-    __pyx_v_w_.shape[0], __pyx_v_w_.strides[0], __pyx_v_w_.suboffsets[0],
-    0,
-    0,
-    &__pyx_t_13,
-    __pyx_v_start_index,
-    __pyx_v_end_index,
-    0,
-    1,
-    1,
-    0,
-    1) < 0))
-{
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_6.data += __pyx_tmp_idx * __pyx_tmp_stride;
 }
 
-if (unlikely(__pyx_memoryview_copy_contents(__pyx_t_8, __pyx_t_27, 1, 1, 0) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __PYX_XDEC_MEMVIEW(&__pyx_t_27, 1);
-    __PYX_XDEC_MEMVIEW(&__pyx_t_8, 1);
+__pyx_t_6.shape[0] = __pyx_v_positions.shape[1];
+__pyx_t_6.strides[0] = __pyx_v_positions.strides[1];
+    __pyx_t_6.suboffsets[0] = -1;
+
+__pyx_t_14 = __pyx_v_k;
+        *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_potential_energy.data) + __pyx_t_14)) )) += __pyx_f_19solar_system_energy_calc_potential_energy(__pyx_v_i, __pyx_v_j, __pyx_t_6);
+        __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
+      }
+    }
   }
 
-  /* "solar_system_derivative.pyx":97
- *             particle_force[2] += central_force_ij[2]
- *         w_[start_index:end_index] = particle_force[:]
- *     return w_             # <<<<<<<<<<<<<<
+  /* "solar_system_energy.pyx":67
+ *                 potential_energy[k] += calc_potential_energy(i, j, positions[k, :])
+ * 
+ *     return potential_energy             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __PYX_INC_MEMVIEW(&__pyx_v_w_, 0);
-  __pyx_r = __pyx_v_w_;
+  __PYX_INC_MEMVIEW(&__pyx_v_potential_energy, 0);
+  __pyx_r = __pyx_v_potential_energy;
   goto __pyx_L0;
 
-  /* "solar_system_derivative.pyx":70
+  /* "solar_system_energy.pyx":50
  * 
  * 
- * cdef double[::1] f_core(double[::1] w):             # <<<<<<<<<<<<<<
+ * cdef double[::1] total_potential_energy(double[:, ::1] w, int time_points):             # <<<<<<<<<<<<<<
  *     cdef:
- *         double[::1] central_force_ij = g_central_force_ij
+ *         double[::1] potential_energy = np.zeros(time_points, dtype=np.double)
  */
 
   /* function exit code */
@@ -2992,14 +2073,11 @@ if (unlikely(__pyx_memoryview_copy_contents(__pyx_t_8, __pyx_t_27, 1, 1, 0) < 0)
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_8, 1);
-  __Pyx_XDECREF(((PyObject *)__pyx_t_9));
-  __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_27, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_7, 1);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("solar_system_derivative.f_core", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("solar_system_energy.total_potential_energy", __pyx_clineno, __pyx_lineno, __pyx_filename);
 
   goto __pyx_L2;
   __pyx_L0:;
@@ -3007,84 +2085,504 @@ if (unlikely(__pyx_memoryview_copy_contents(__pyx_t_8, __pyx_t_27, 1, 1, 0) < 0)
     PyErr_SetString(PyExc_TypeError,"Memoryview return value is not initialized");
   }
   __pyx_L2:;
-  __PYX_XDEC_MEMVIEW(&__pyx_v_central_force_ij, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_w_, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_v_particle_force, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_potential_energy, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_positions, 1);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "solar_system_derivative.pyx":100
+/* "solar_system_energy.pyx":70
  * 
  * 
- * cpdef f(w, t):             # <<<<<<<<<<<<<<
- *     # f = dv / dt
- *     return f_core(w)
+ * cdef double calc_kinetic_energy(int j, double[::1] velocity):             # <<<<<<<<<<<<<<
+ *     cdef:
+ *         double[::1] masses = g_masses
  */
 
-static PyObject *__pyx_pw_23solar_system_derivative_5f(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_23solar_system_derivative_f(PyObject *__pyx_v_w, CYTHON_UNUSED PyObject *__pyx_v_t, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  PyObject *__pyx_r = NULL;
+static double __pyx_f_19solar_system_energy_calc_kinetic_energy(int __pyx_v_j, __Pyx_memviewslice __pyx_v_velocity) {
+  __Pyx_memviewslice __pyx_v_masses = { 0, 0, { 0 }, { 0 }, { 0 } };
+  double __pyx_v_mj;
+  double __pyx_v_velocity_squared;
+  double __pyx_v_kinetic_energy;
+  int __pyx_v_k;
+  double __pyx_r;
   __Pyx_RefNannyDeclarations
-  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_t_2 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  PyObject *__pyx_t_3 = NULL;
+  int __pyx_t_1;
+  int __pyx_t_2;
+  Py_ssize_t __pyx_t_3;
+  Py_ssize_t __pyx_t_4;
+  Py_ssize_t __pyx_t_5;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("f", 0);
+  __Pyx_RefNannySetupContext("calc_kinetic_energy", 0);
 
-  /* "solar_system_derivative.pyx":102
- * cpdef f(w, t):
- *     # f = dv / dt
- *     return f_core(w)             # <<<<<<<<<<<<<<
+  /* "solar_system_energy.pyx":72
+ * cdef double calc_kinetic_energy(int j, double[::1] velocity):
+ *     cdef:
+ *         double[::1] masses = g_masses             # <<<<<<<<<<<<<<
+ *         double mj, velocity_squared = 0
+ *         double kinetic_energy = 0
  */
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(__pyx_v_w);
-  if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = __pyx_f_23solar_system_derivative_f_core(__pyx_t_1); if (unlikely(!__pyx_t_2.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
-  __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_t_2, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_2, 1);
-  __pyx_r = __pyx_t_3;
-  __pyx_t_3 = 0;
+  if (unlikely(!__pyx_v_19solar_system_energy_g_masses.memview)) { __Pyx_RaiseUnboundLocalError("g_masses"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
+  __PYX_INC_MEMVIEW(&__pyx_v_19solar_system_energy_g_masses, 0);
+  __pyx_v_masses = __pyx_v_19solar_system_energy_g_masses;
+
+  /* "solar_system_energy.pyx":73
+ *     cdef:
+ *         double[::1] masses = g_masses
+ *         double mj, velocity_squared = 0             # <<<<<<<<<<<<<<
+ *         double kinetic_energy = 0
+ *         int k
+ */
+  __pyx_v_velocity_squared = 0.0;
+
+  /* "solar_system_energy.pyx":74
+ *         double[::1] masses = g_masses
+ *         double mj, velocity_squared = 0
+ *         double kinetic_energy = 0             # <<<<<<<<<<<<<<
+ *         int k
+ * 
+ */
+  __pyx_v_kinetic_energy = 0.0;
+
+  /* "solar_system_energy.pyx":77
+ *         int k
+ * 
+ *     for k in range(number_dimensions):             # <<<<<<<<<<<<<<
+ *         velocity_squared += velocity[k] * velocity[k]
+ * 
+ */
+  __pyx_t_1 = __pyx_v_19solar_system_energy_number_dimensions;
+  for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
+    __pyx_v_k = __pyx_t_2;
+
+    /* "solar_system_energy.pyx":78
+ * 
+ *     for k in range(number_dimensions):
+ *         velocity_squared += velocity[k] * velocity[k]             # <<<<<<<<<<<<<<
+ * 
+ *     mj = masses[j]
+ */
+    __pyx_t_3 = __pyx_v_k;
+    __pyx_t_4 = __pyx_v_k;
+    __pyx_v_velocity_squared = (__pyx_v_velocity_squared + ((*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_velocity.data) + __pyx_t_3)) ))) * (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_velocity.data) + __pyx_t_4)) )))));
+  }
+
+  /* "solar_system_energy.pyx":80
+ *         velocity_squared += velocity[k] * velocity[k]
+ * 
+ *     mj = masses[j]             # <<<<<<<<<<<<<<
+ *     with cdivision:
+ *         kinetic_energy = mj * velocity_squared / 2.
+ */
+  __pyx_t_5 = __pyx_v_j;
+  __pyx_v_mj = (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_masses.data) + __pyx_t_5)) )));
+
+  /* "solar_system_energy.pyx":82
+ *     mj = masses[j]
+ *     with cdivision:
+ *         kinetic_energy = mj * velocity_squared / 2.             # <<<<<<<<<<<<<<
+ * 
+ *     return kinetic_energy
+ */
+  __pyx_v_kinetic_energy = ((__pyx_v_mj * __pyx_v_velocity_squared) / 2.);
+
+  /* "solar_system_energy.pyx":84
+ *         kinetic_energy = mj * velocity_squared / 2.
+ * 
+ *     return kinetic_energy             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __pyx_r = __pyx_v_kinetic_energy;
   goto __pyx_L0;
 
-  /* "solar_system_derivative.pyx":100
+  /* "solar_system_energy.pyx":70
  * 
  * 
- * cpdef f(w, t):             # <<<<<<<<<<<<<<
- *     # f = dv / dt
- *     return f_core(w)
+ * cdef double calc_kinetic_energy(int j, double[::1] velocity):             # <<<<<<<<<<<<<<
+ *     cdef:
+ *         double[::1] masses = g_masses
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_WriteUnraisable("solar_system_energy.calc_kinetic_energy", __pyx_clineno, __pyx_lineno, __pyx_filename, 0, 0);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __PYX_XDEC_MEMVIEW(&__pyx_v_masses, 1);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "solar_system_energy.pyx":87
+ * 
+ * 
+ * cdef double[::1] total_kinetic_energy(double[:, ::1] w, int time_points):             # <<<<<<<<<<<<<<
+ *     cdef:
+ *         double[::1] kinetic_energy = np.zeros(time_points, dtype=np.double)
+ */
+
+static __Pyx_memviewslice __pyx_f_19solar_system_energy_total_kinetic_energy(__Pyx_memviewslice __pyx_v_w, int __pyx_v_time_points) {
+  __Pyx_memviewslice __pyx_v_kinetic_energy = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_v_velocities = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_v_v_start;
+  int __pyx_v_i;
+  int __pyx_v_k;
+  int __pyx_v_start_index;
+  int __pyx_v_end_index;
+  __Pyx_memviewslice __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  __Pyx_memviewslice __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_t_7 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_t_8;
+  int __pyx_t_9;
+  int __pyx_t_10;
+  int __pyx_t_11;
+  int __pyx_t_12;
+  Py_ssize_t __pyx_t_13;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("total_kinetic_energy", 0);
+
+  /* "solar_system_energy.pyx":89
+ * cdef double[::1] total_kinetic_energy(double[:, ::1] w, int time_points):
+ *     cdef:
+ *         double[::1] kinetic_energy = np.zeros(time_points, dtype=np.double)             # <<<<<<<<<<<<<<
+ * 
+ *         double[:, ::1] velocities
+ */
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_time_points); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
+  __pyx_t_1 = 0;
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(__pyx_t_5);
+  if (unlikely(!__pyx_t_6.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_v_kinetic_energy = __pyx_t_6;
+  __pyx_t_6.memview = NULL;
+  __pyx_t_6.data = NULL;
+
+  /* "solar_system_energy.pyx":93
+ *         double[:, ::1] velocities
+ * 
+ *         int v_start = number_dimensions * number_particles             # <<<<<<<<<<<<<<
+ *         int i, j, k, start_index, end_index
+ * 
+ */
+  __pyx_v_v_start = (__pyx_v_19solar_system_energy_number_dimensions * __pyx_v_19solar_system_energy_number_particles);
+
+  /* "solar_system_energy.pyx":96
+ *         int i, j, k, start_index, end_index
+ * 
+ *     velocities = w[:, v_start:]             # <<<<<<<<<<<<<<
+ *     for k in range(time_points):
+ *         for i in range(number_particles):
+ */
+  __pyx_t_7.data = __pyx_v_w.data;
+  __pyx_t_7.memview = __pyx_v_w.memview;
+  __PYX_INC_MEMVIEW(&__pyx_t_7, 0);
+  __pyx_t_7.shape[0] = __pyx_v_w.shape[0];
+__pyx_t_7.strides[0] = __pyx_v_w.strides[0];
+    __pyx_t_7.suboffsets[0] = -1;
+
+__pyx_t_8 = -1;
+  if (unlikely(__pyx_memoryview_slice_memviewslice(
+    &__pyx_t_7,
+    __pyx_v_w.shape[1], __pyx_v_w.strides[1], __pyx_v_w.suboffsets[1],
+    1,
+    1,
+    &__pyx_t_8,
+    __pyx_v_v_start,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1) < 0))
+{
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+}
+
+__pyx_v_velocities = __pyx_t_7;
+  __pyx_t_7.memview = NULL;
+  __pyx_t_7.data = NULL;
+
+  /* "solar_system_energy.pyx":97
+ * 
+ *     velocities = w[:, v_start:]
+ *     for k in range(time_points):             # <<<<<<<<<<<<<<
+ *         for i in range(number_particles):
+ *             start_index = i * number_dimensions
+ */
+  __pyx_t_8 = __pyx_v_time_points;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v_k = __pyx_t_9;
+
+    /* "solar_system_energy.pyx":98
+ *     velocities = w[:, v_start:]
+ *     for k in range(time_points):
+ *         for i in range(number_particles):             # <<<<<<<<<<<<<<
+ *             start_index = i * number_dimensions
+ *             end_index = (i + 1) * number_dimensions
+ */
+    __pyx_t_10 = __pyx_v_19solar_system_energy_number_particles;
+    for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
+      __pyx_v_i = __pyx_t_11;
+
+      /* "solar_system_energy.pyx":99
+ *     for k in range(time_points):
+ *         for i in range(number_particles):
+ *             start_index = i * number_dimensions             # <<<<<<<<<<<<<<
+ *             end_index = (i + 1) * number_dimensions
+ *             kinetic_energy[k] += calc_kinetic_energy(i, velocities[k, start_index:end_index])
+ */
+      __pyx_v_start_index = (__pyx_v_i * __pyx_v_19solar_system_energy_number_dimensions);
+
+      /* "solar_system_energy.pyx":100
+ *         for i in range(number_particles):
+ *             start_index = i * number_dimensions
+ *             end_index = (i + 1) * number_dimensions             # <<<<<<<<<<<<<<
+ *             kinetic_energy[k] += calc_kinetic_energy(i, velocities[k, start_index:end_index])
+ * 
+ */
+      __pyx_v_end_index = ((__pyx_v_i + 1) * __pyx_v_19solar_system_energy_number_dimensions);
+
+      /* "solar_system_energy.pyx":101
+ *             start_index = i * number_dimensions
+ *             end_index = (i + 1) * number_dimensions
+ *             kinetic_energy[k] += calc_kinetic_energy(i, velocities[k, start_index:end_index])             # <<<<<<<<<<<<<<
+ * 
+ *     return kinetic_energy
+ */
+      __pyx_t_6.data = __pyx_v_velocities.data;
+      __pyx_t_6.memview = __pyx_v_velocities.memview;
+      __PYX_INC_MEMVIEW(&__pyx_t_6, 0);
+      {
+    Py_ssize_t __pyx_tmp_idx = __pyx_v_k;
+    Py_ssize_t __pyx_tmp_shape = __pyx_v_velocities.shape[0];
+    Py_ssize_t __pyx_tmp_stride = __pyx_v_velocities.strides[0];
+    if (0 && (__pyx_tmp_idx < 0))
+        __pyx_tmp_idx += __pyx_tmp_shape;
+    if (0 && (__pyx_tmp_idx < 0 || __pyx_tmp_idx >= __pyx_tmp_shape)) {
+        PyErr_SetString(PyExc_IndexError, "Index out of bounds (axis 0)");
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    }
+        __pyx_t_6.data += __pyx_tmp_idx * __pyx_tmp_stride;
+}
+
+__pyx_t_12 = -1;
+      if (unlikely(__pyx_memoryview_slice_memviewslice(
+    &__pyx_t_6,
+    __pyx_v_velocities.shape[1], __pyx_v_velocities.strides[1], __pyx_v_velocities.suboffsets[1],
+    1,
+    0,
+    &__pyx_t_12,
+    __pyx_v_start_index,
+    __pyx_v_end_index,
+    0,
+    1,
+    1,
+    0,
+    1) < 0))
+{
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+}
+
+__pyx_t_13 = __pyx_v_k;
+      *((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_kinetic_energy.data) + __pyx_t_13)) )) += __pyx_f_19solar_system_energy_calc_kinetic_energy(__pyx_v_i, __pyx_t_6);
+      __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
+    }
+  }
+
+  /* "solar_system_energy.pyx":103
+ *             kinetic_energy[k] += calc_kinetic_energy(i, velocities[k, start_index:end_index])
+ * 
+ *     return kinetic_energy             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __PYX_INC_MEMVIEW(&__pyx_v_kinetic_energy, 0);
+  __pyx_r = __pyx_v_kinetic_energy;
+  goto __pyx_L0;
+
+  /* "solar_system_energy.pyx":87
+ * 
+ * 
+ * cdef double[::1] total_kinetic_energy(double[:, ::1] w, int time_points):             # <<<<<<<<<<<<<<
+ *     cdef:
+ *         double[::1] kinetic_energy = np.zeros(time_points, dtype=np.double)
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_7, 1);
+  __pyx_r.data = NULL;
+  __pyx_r.memview = NULL;
+  __Pyx_AddTraceback("solar_system_energy.total_kinetic_energy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+
+  goto __pyx_L2;
+  __pyx_L0:;
+  if (unlikely(!__pyx_r.memview)) {
+    PyErr_SetString(PyExc_TypeError,"Memoryview return value is not initialized");
+  }
+  __pyx_L2:;
+  __PYX_XDEC_MEMVIEW(&__pyx_v_kinetic_energy, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_velocities, 1);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "solar_system_energy.pyx":106
+ * 
+ * 
+ * cpdef calc_energy(w, time_points):             # <<<<<<<<<<<<<<
+ *     kinetic_energy = total_kinetic_energy(w, time_points)
+ *     potential_energy = total_potential_energy(w, time_points)
+ */
+
+static PyObject *__pyx_pw_19solar_system_energy_1calc_energy(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_19solar_system_energy_calc_energy(PyObject *__pyx_v_w, PyObject *__pyx_v_time_points, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  PyObject *__pyx_v_kinetic_energy = NULL;
+  PyObject *__pyx_v_potential_energy = NULL;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_t_2;
+  __Pyx_memviewslice __pyx_t_3 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("calc_energy", 0);
+
+  /* "solar_system_energy.pyx":107
+ * 
+ * cpdef calc_energy(w, time_points):
+ *     kinetic_energy = total_kinetic_energy(w, time_points)             # <<<<<<<<<<<<<<
+ *     potential_energy = total_potential_energy(w, time_points)
+ *     return [kinetic_energy, potential_energy]
+ */
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_d_dc_double(__pyx_v_w);
+  if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_v_time_points); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __pyx_f_19solar_system_energy_total_kinetic_energy(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_3, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_3, 1);
+  __pyx_v_kinetic_energy = __pyx_t_4;
+  __pyx_t_4 = 0;
+
+  /* "solar_system_energy.pyx":108
+ * cpdef calc_energy(w, time_points):
+ *     kinetic_energy = total_kinetic_energy(w, time_points)
+ *     potential_energy = total_potential_energy(w, time_points)             # <<<<<<<<<<<<<<
+ *     return [kinetic_energy, potential_energy]
+ * 
+ */
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_d_dc_double(__pyx_v_w);
+  if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_v_time_points); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __pyx_f_19solar_system_energy_total_potential_energy(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_3, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_3, 1);
+  __pyx_v_potential_energy = __pyx_t_4;
+  __pyx_t_4 = 0;
+
+  /* "solar_system_energy.pyx":109
+ *     kinetic_energy = total_kinetic_energy(w, time_points)
+ *     potential_energy = total_potential_energy(w, time_points)
+ *     return [kinetic_energy, potential_energy]             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 109; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_INCREF(__pyx_v_kinetic_energy);
+  __Pyx_GIVEREF(__pyx_v_kinetic_energy);
+  PyList_SET_ITEM(__pyx_t_4, 0, __pyx_v_kinetic_energy);
+  __Pyx_INCREF(__pyx_v_potential_energy);
+  __Pyx_GIVEREF(__pyx_v_potential_energy);
+  PyList_SET_ITEM(__pyx_t_4, 1, __pyx_v_potential_energy);
+  __pyx_r = __pyx_t_4;
+  __pyx_t_4 = 0;
+  goto __pyx_L0;
+
+  /* "solar_system_energy.pyx":106
+ * 
+ * 
+ * cpdef calc_energy(w, time_points):             # <<<<<<<<<<<<<<
+ *     kinetic_energy = total_kinetic_energy(w, time_points)
+ *     potential_energy = total_potential_energy(w, time_points)
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_2, 1);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("solar_system_derivative.f", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_3, 1);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("solar_system_energy.calc_energy", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
+  __Pyx_XDECREF(__pyx_v_kinetic_energy);
+  __Pyx_XDECREF(__pyx_v_potential_energy);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23solar_system_derivative_5f(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_23solar_system_derivative_5f(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19solar_system_energy_1calc_energy(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19solar_system_energy_1calc_energy(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_w = 0;
-  PyObject *__pyx_v_t = 0;
+  PyObject *__pyx_v_time_points = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("f (wrapper)", 0);
+  __Pyx_RefNannySetupContext("calc_energy (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_w,&__pyx_n_s_t,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_w,&__pyx_n_s_time_points,0};
     PyObject* values[2] = {0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -3101,13 +2599,13 @@ static PyObject *__pyx_pw_23solar_system_derivative_5f(PyObject *__pyx_self, PyO
         if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
         else goto __pyx_L5_argtuple_error;
         case  1:
-        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_t)) != 0)) kw_args--;
+        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_time_points)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("f", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("calc_energy", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "f") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "calc_energy") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3116,33 +2614,33 @@ static PyObject *__pyx_pw_23solar_system_derivative_5f(PyObject *__pyx_self, PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_w = values[0];
-    __pyx_v_t = values[1];
+    __pyx_v_time_points = values[1];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("f", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("calc_energy", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("solar_system_derivative.f", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("solar_system_energy.calc_energy", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23solar_system_derivative_4f(__pyx_self, __pyx_v_w, __pyx_v_t);
+  __pyx_r = __pyx_pf_19solar_system_energy_calc_energy(__pyx_self, __pyx_v_w, __pyx_v_time_points);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23solar_system_derivative_4f(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_t) {
+static PyObject *__pyx_pf_19solar_system_energy_calc_energy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_time_points) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("f", 0);
+  __Pyx_RefNannySetupContext("calc_energy", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_23solar_system_derivative_f(__pyx_v_w, __pyx_v_t, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_19solar_system_energy_calc_energy(__pyx_v_w, __pyx_v_time_points, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3151,7 +2649,301 @@ static PyObject *__pyx_pf_23solar_system_derivative_4f(CYTHON_UNUSED PyObject *_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("solar_system_derivative.f", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("solar_system_energy.calc_energy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "solar_system_energy.pyx":112
+ * 
+ * 
+ * cpdef kinetic(w, time_points):             # <<<<<<<<<<<<<<
+ *     return total_kinetic_energy(w, time_points)
+ * 
+ */
+
+static PyObject *__pyx_pw_19solar_system_energy_3kinetic(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_19solar_system_energy_kinetic(PyObject *__pyx_v_w, PyObject *__pyx_v_time_points, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_t_2;
+  __Pyx_memviewslice __pyx_t_3 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("kinetic", 0);
+
+  /* "solar_system_energy.pyx":113
+ * 
+ * cpdef kinetic(w, time_points):
+ *     return total_kinetic_energy(w, time_points)             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_d_dc_double(__pyx_v_w);
+  if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_v_time_points); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __pyx_f_19solar_system_energy_total_kinetic_energy(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_3, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_3, 1);
+  __pyx_r = __pyx_t_4;
+  __pyx_t_4 = 0;
+  goto __pyx_L0;
+
+  /* "solar_system_energy.pyx":112
+ * 
+ * 
+ * cpdef kinetic(w, time_points):             # <<<<<<<<<<<<<<
+ *     return total_kinetic_energy(w, time_points)
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_3, 1);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("solar_system_energy.kinetic", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_19solar_system_energy_3kinetic(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19solar_system_energy_3kinetic(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_w = 0;
+  PyObject *__pyx_v_time_points = 0;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("kinetic (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_w,&__pyx_n_s_time_points,0};
+    PyObject* values[2] = {0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        case  1:
+        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_time_points)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("kinetic", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "kinetic") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+    }
+    __pyx_v_w = values[0];
+    __pyx_v_time_points = values[1];
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("kinetic", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("solar_system_energy.kinetic", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_19solar_system_energy_2kinetic(__pyx_self, __pyx_v_w, __pyx_v_time_points);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_19solar_system_energy_2kinetic(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_time_points) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("kinetic", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_19solar_system_energy_kinetic(__pyx_v_w, __pyx_v_time_points, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("solar_system_energy.kinetic", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "solar_system_energy.pyx":116
+ * 
+ * 
+ * cpdef potential(w, time_points):             # <<<<<<<<<<<<<<
+ *     return total_potential_energy(w, time_points)
+ */
+
+static PyObject *__pyx_pw_19solar_system_energy_5potential(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_19solar_system_energy_potential(PyObject *__pyx_v_w, PyObject *__pyx_v_time_points, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  int __pyx_t_2;
+  __Pyx_memviewslice __pyx_t_3 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("potential", 0);
+
+  /* "solar_system_energy.pyx":117
+ * 
+ * cpdef potential(w, time_points):
+ *     return total_potential_energy(w, time_points)             # <<<<<<<<<<<<<<
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_d_dc_double(__pyx_v_w);
+  if (unlikely(!__pyx_t_1.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_v_time_points); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __pyx_f_19solar_system_energy_total_potential_energy(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
+  __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_3, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_4);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_3, 1);
+  __pyx_r = __pyx_t_4;
+  __pyx_t_4 = 0;
+  goto __pyx_L0;
+
+  /* "solar_system_energy.pyx":116
+ * 
+ * 
+ * cpdef potential(w, time_points):             # <<<<<<<<<<<<<<
+ *     return total_potential_energy(w, time_points)
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_3, 1);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("solar_system_energy.potential", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_19solar_system_energy_5potential(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19solar_system_energy_5potential(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_w = 0;
+  PyObject *__pyx_v_time_points = 0;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("potential (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_w,&__pyx_n_s_time_points,0};
+    PyObject* values[2] = {0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_w)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        case  1:
+        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_time_points)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("potential", 1, 2, 2, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "potential") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+    }
+    __pyx_v_w = values[0];
+    __pyx_v_time_points = values[1];
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("potential", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("solar_system_energy.potential", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_19solar_system_energy_4potential(__pyx_self, __pyx_v_w, __pyx_v_time_points);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_19solar_system_energy_4potential(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_w, PyObject *__pyx_v_time_points) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("potential", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_19solar_system_energy_potential(__pyx_v_w, __pyx_v_time_points, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("solar_system_energy.potential", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -15149,7 +14941,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "solar_system_derivative.array", /*tp_name*/
+  "solar_system_energy.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -15255,7 +15047,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "solar_system_derivative.Enum", /*tp_name*/
+  "solar_system_energy.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -15502,7 +15294,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "solar_system_derivative.memoryview", /*tp_name*/
+  "solar_system_energy.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -15627,7 +15419,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "solar_system_derivative._memoryviewslice", /*tp_name*/
+  "solar_system_energy._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -15692,9 +15484,9 @@ static PyTypeObject __pyx_type___pyx_memoryviewslice = {
 };
 
 static PyMethodDef __pyx_methods[] = {
-  {"get_t", (PyCFunction)__pyx_pw_23solar_system_derivative_1get_t, METH_O, 0},
-  {"get_w0", (PyCFunction)__pyx_pw_23solar_system_derivative_3get_w0, METH_NOARGS, 0},
-  {"f", (PyCFunction)__pyx_pw_23solar_system_derivative_5f, METH_VARARGS|METH_KEYWORDS, 0},
+  {"calc_energy", (PyCFunction)__pyx_pw_19solar_system_energy_1calc_energy, METH_VARARGS|METH_KEYWORDS, 0},
+  {"kinetic", (PyCFunction)__pyx_pw_19solar_system_energy_3kinetic, METH_VARARGS|METH_KEYWORDS, 0},
+  {"potential", (PyCFunction)__pyx_pw_19solar_system_energy_5potential, METH_VARARGS|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
@@ -15705,7 +15497,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "solar_system_derivative",
+    "solar_system_energy",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -15742,13 +15534,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_b__17, __pyx_k__17, sizeof(__pyx_k__17), 0, 0, 0, 0},
   {&__pyx_kp_u__18, __pyx_k__18, sizeof(__pyx_k__18), 0, 1, 0, 0},
   {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
-  {&__pyx_n_s_arange, __pyx_k_arange, sizeof(__pyx_k_arange), 0, 0, 1, 1},
   {&__pyx_n_s_array, __pyx_k_array, sizeof(__pyx_k_array), 0, 0, 1, 1},
   {&__pyx_n_s_base, __pyx_k_base, sizeof(__pyx_k_base), 0, 0, 1, 1},
   {&__pyx_n_s_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 0, 1, 1},
   {&__pyx_n_u_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 1, 0, 1},
   {&__pyx_n_s_class, __pyx_k_class, sizeof(__pyx_k_class), 0, 0, 1, 1},
-  {&__pyx_n_s_concatenate, __pyx_k_concatenate, sizeof(__pyx_k_concatenate), 0, 0, 1, 1},
   {&__pyx_kp_s_contiguous_and_direct, __pyx_k_contiguous_and_direct, sizeof(__pyx_k_contiguous_and_direct), 0, 0, 1, 0},
   {&__pyx_kp_s_contiguous_and_indirect, __pyx_k_contiguous_and_indirect, sizeof(__pyx_k_contiguous_and_indirect), 0, 0, 1, 0},
   {&__pyx_n_s_double, __pyx_k_double, sizeof(__pyx_k_double), 0, 0, 1, 1},
@@ -15791,8 +15581,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_strided_and_direct_or_indirect, __pyx_k_strided_and_direct_or_indirect, sizeof(__pyx_k_strided_and_direct_or_indirect), 0, 0, 1, 0},
   {&__pyx_kp_s_strided_and_indirect, __pyx_k_strided_and_indirect, sizeof(__pyx_k_strided_and_indirect), 0, 0, 1, 0},
   {&__pyx_n_s_struct, __pyx_k_struct, sizeof(__pyx_k_struct), 0, 0, 1, 1},
-  {&__pyx_n_s_t, __pyx_k_t, sizeof(__pyx_k_t), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
+  {&__pyx_n_s_time_points, __pyx_k_time_points, sizeof(__pyx_k_time_points), 0, 0, 1, 1},
   {&__pyx_kp_s_unable_to_allocate_array_data, __pyx_k_unable_to_allocate_array_data, sizeof(__pyx_k_unable_to_allocate_array_data), 0, 0, 1, 0},
   {&__pyx_kp_s_unable_to_allocate_shape_and_str, __pyx_k_unable_to_allocate_shape_and_str, sizeof(__pyx_k_unable_to_allocate_shape_and_str), 0, 0, 1, 0},
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
@@ -15804,12 +15594,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_y0, __pyx_k_y0, sizeof(__pyx_k_y0), 0, 0, 1, 1},
   {&__pyx_n_s_z0, __pyx_k_z0, sizeof(__pyx_k_z0), 0, 0, 1, 1},
   {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
-  {&__pyx_n_s_zip, __pyx_k_zip, sizeof(__pyx_k_zip), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -16093,11 +15881,11 @@ if (unlikely(PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; 
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initsolar_system_derivative(void); /*proto*/
-PyMODINIT_FUNC initsolar_system_derivative(void)
+PyMODINIT_FUNC initsolar_system_energy(void); /*proto*/
+PyMODINIT_FUNC initsolar_system_energy(void)
 #else
-PyMODINIT_FUNC PyInit_solar_system_derivative(void); /*proto*/
-PyMODINIT_FUNC PyInit_solar_system_derivative(void)
+PyMODINIT_FUNC PyInit_solar_system_energy(void); /*proto*/
+PyMODINIT_FUNC PyInit_solar_system_energy(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -16129,7 +15917,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_solar_system_derivative(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_solar_system_energy(void)", 0);
   if (__Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -16157,7 +15945,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("solar_system_derivative", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("solar_system_energy", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -16174,14 +15962,14 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_solar_system_derivative) {
+  if (__pyx_module_is_main_solar_system_energy) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "solar_system_derivative")) {
-      if (unlikely(PyDict_SetItemString(modules, "solar_system_derivative", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "solar_system_energy")) {
+      if (unlikely(PyDict_SetItemString(modules, "solar_system_energy", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -16254,7 +16042,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 4; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_sun = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_sun = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":5
  * cdef:
@@ -16267,7 +16055,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_mercury = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_mercury = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":6
  *     double m_sun = 1.9891 * 10 ** 30
@@ -16280,7 +16068,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 6; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_venus = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_venus = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":7
  *     double m_mercury = 3.3020 * 10 ** 23
@@ -16293,7 +16081,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 7; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_earth = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_earth = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":8
  *     double m_venus = 4.8685 * 10 ** 24
@@ -16306,7 +16094,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 8; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_mars = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_mars = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":9
  *     double m_earth = 5.9736 * 10 ** 24
@@ -16319,7 +16107,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 9; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_jupiter = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_jupiter = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":10
  *     double m_mars = 6.4185 * 10 ** 23
@@ -16332,7 +16120,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_saturn = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_saturn = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":11
  *     double m_jupiter = 1.8986 * 10 ** 27
@@ -16345,7 +16133,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 11; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_uranus = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_uranus = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":12
  *     double m_saturn = 5.98486 * 10 ** 26
@@ -16358,7 +16146,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 12; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_neptune = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_neptune = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":13
  *     double m_uranus = 1.0243 * 10 ** 26
@@ -16371,7 +16159,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_m_pluto = __pyx_t_2;
+  __pyx_v_19solar_system_energy_m_pluto = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":15
  *     double m_pluto = 1.27 * 10 ** 22
@@ -16380,7 +16168,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double x_mercury = 2.60517 * 10 ** 10
  *     double x_venus = 7.2129 * 10 ** 10
  */
-  __pyx_v_23solar_system_derivative_x_sun = (-7.0299 * 100000000.0);
+  __pyx_v_19solar_system_energy_x_sun = (-7.0299 * 100000000.0);
 
   /* "solar_system_data_cy.pxi":16
  * 
@@ -16393,7 +16181,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 16; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_mercury = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_mercury = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":17
  *     double x_sun = -7.0299 * 10 ** 8
@@ -16406,7 +16194,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 17; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_venus = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_venus = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":18
  *     double x_mercury = 2.60517 * 10 ** 10
@@ -16419,7 +16207,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 18; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_earth = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_earth = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":19
  *     double x_venus = 7.2129 * 10 ** 10
@@ -16432,7 +16220,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_mars = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_mars = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":20
  *     double x_earth = -2.9104 * 10 ** 10
@@ -16445,7 +16233,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_jupiter = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_jupiter = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":21
  *     double x_mars = -2.47064 * 10 ** 11
@@ -16458,7 +16246,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_saturn = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_saturn = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":22
  *     double x_jupiter = 2.67553 * 10 ** 11
@@ -16471,7 +16259,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_uranus = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_uranus = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":23
  *     double x_saturn = 6.999 * 10 ** 11
@@ -16484,7 +16272,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_neptune = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_neptune = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":24
  *     double x_uranus = 2.65363 * 10 ** 12
@@ -16497,7 +16285,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_x_pluto = __pyx_t_2;
+  __pyx_v_19solar_system_energy_x_pluto = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":26
  *     double x_pluto = -1.31126 * 10 ** 12
@@ -16506,7 +16294,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double y_mercury = -6.1102 * 10 ** 10
  *     double y_venus = 7.9106 * 10 ** 10
  */
-  __pyx_v_23solar_system_derivative_y_sun = (-7.5415 * 100000000.0);
+  __pyx_v_19solar_system_energy_y_sun = (-7.5415 * 100000000.0);
 
   /* "solar_system_data_cy.pxi":27
  * 
@@ -16519,7 +16307,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_mercury = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_mercury = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":28
  *     double y_sun = -7.5415 * 10 ** 8
@@ -16532,7 +16320,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_venus = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_venus = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":29
  *     double y_mercury = -6.1102 * 10 ** 10
@@ -16545,7 +16333,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_earth = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_earth = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":30
  *     double y_venus = 7.9106 * 10 ** 10
@@ -16558,7 +16346,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_mars = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_mars = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":31
  *     double y_earth = 1.43576 * 10 ** 11
@@ -16571,7 +16359,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_jupiter = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_jupiter = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":32
  *     double y_mars = -1.03161 * 10 ** 11
@@ -16584,7 +16372,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_saturn = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_saturn = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":33
  *     double y_jupiter = 7.0482 * 10 ** 11
@@ -16597,7 +16385,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_uranus = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_uranus = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":34
  *     double y_saturn = 1.16781 * 10 ** 12
@@ -16610,7 +16398,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_neptune = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_neptune = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":35
  *     double y_uranus = -3.6396 * 10 ** 12
@@ -16623,7 +16411,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_y_pluto = __pyx_t_2;
+  __pyx_v_19solar_system_energy_y_pluto = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":37
  *     double y_pluto = -4.2646 * 10 ** 12
@@ -16632,7 +16420,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double z_mercury = -7.3616 * 10 ** 9
  *     double z_venus = -3.0885 * 10 ** 9
  */
-  __pyx_v_23solar_system_derivative_z_sun = (2.38988 * 10000000.0);
+  __pyx_v_19solar_system_energy_z_sun = (2.38988 * 10000000.0);
 
   /* "solar_system_data_cy.pxi":38
  * 
@@ -16641,7 +16429,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double z_venus = -3.0885 * 10 ** 9
  *     double z_earth = 2.39614 * 10 ** 7
  */
-  __pyx_v_23solar_system_derivative_z_mercury = (-7.3616 * 1000000000.0);
+  __pyx_v_19solar_system_energy_z_mercury = (-7.3616 * 1000000000.0);
 
   /* "solar_system_data_cy.pxi":39
  *     double z_sun = 2.38988 * 10 ** 7
@@ -16650,7 +16438,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double z_earth = 2.39614 * 10 ** 7
  *     double z_mars = 5.8788 * 10 ** 9
  */
-  __pyx_v_23solar_system_derivative_z_venus = (-3.0885 * 1000000000.0);
+  __pyx_v_19solar_system_energy_z_venus = (-3.0885 * 1000000000.0);
 
   /* "solar_system_data_cy.pxi":40
  *     double z_mercury = -7.3616 * 10 ** 9
@@ -16659,7 +16447,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double z_mars = 5.8788 * 10 ** 9
  *     double z_jupiter = -8.911 * 10 ** 9
  */
-  __pyx_v_23solar_system_derivative_z_earth = (2.39614 * 10000000.0);
+  __pyx_v_19solar_system_energy_z_earth = (2.39614 * 10000000.0);
 
   /* "solar_system_data_cy.pxi":41
  *     double z_venus = -3.0885 * 10 ** 9
@@ -16668,7 +16456,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double z_jupiter = -8.911 * 10 ** 9
  *     double z_saturn = -4.817 * 10 ** 10
  */
-  __pyx_v_23solar_system_derivative_z_mars = (5.8788 * 1000000000.0);
+  __pyx_v_19solar_system_energy_z_mars = (5.8788 * 1000000000.0);
 
   /* "solar_system_data_cy.pxi":42
  *     double z_earth = 2.39614 * 10 ** 7
@@ -16677,7 +16465,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double z_saturn = -4.817 * 10 ** 10
  *     double z_uranus = 1.37957 * 10 ** 10
  */
-  __pyx_v_23solar_system_derivative_z_jupiter = (-8.911 * 1000000000.0);
+  __pyx_v_19solar_system_energy_z_jupiter = (-8.911 * 1000000000.0);
 
   /* "solar_system_data_cy.pxi":43
  *     double z_mars = 5.8788 * 10 ** 9
@@ -16690,7 +16478,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_z_saturn = __pyx_t_2;
+  __pyx_v_19solar_system_energy_z_saturn = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":44
  *     double z_jupiter = -8.911 * 10 ** 9
@@ -16703,7 +16491,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_z_uranus = __pyx_t_2;
+  __pyx_v_19solar_system_energy_z_uranus = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":45
  *     double z_saturn = -4.817 * 10 ** 10
@@ -16716,7 +16504,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_z_neptune = __pyx_t_2;
+  __pyx_v_19solar_system_energy_z_neptune = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":46
  *     double z_uranus = 1.37957 * 10 ** 10
@@ -16729,7 +16517,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_23solar_system_derivative_z_pluto = __pyx_t_2;
+  __pyx_v_19solar_system_energy_z_pluto = __pyx_t_2;
 
   /* "solar_system_data_cy.pxi":48
  *     double z_pluto = 8.3563 * 10 ** 11
@@ -16738,7 +16526,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_mercury = 34796
  *     double vx_venus = -25968.7
  */
-  __pyx_v_23solar_system_derivative_vx_sun = 14.1931;
+  __pyx_v_19solar_system_energy_vx_sun = 14.1931;
 
   /* "solar_system_data_cy.pxi":49
  * 
@@ -16747,7 +16535,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_venus = -25968.7
  *     double vx_earth = -29699.8
  */
-  __pyx_v_23solar_system_derivative_vx_mercury = 34796.0;
+  __pyx_v_19solar_system_energy_vx_mercury = 34796.0;
 
   /* "solar_system_data_cy.pxi":50
  *     double vx_sun = 14.1931
@@ -16756,7 +16544,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_earth = -29699.8
  *     double vx_mars = 1862.73
  */
-  __pyx_v_23solar_system_derivative_vx_venus = -25968.7;
+  __pyx_v_19solar_system_energy_vx_venus = -25968.7;
 
   /* "solar_system_data_cy.pxi":51
  *     double vx_mercury = 34796
@@ -16765,7 +16553,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_mars = 1862.73
  *     double vx_jupiter = -12376.3
  */
-  __pyx_v_23solar_system_derivative_vx_earth = -29699.8;
+  __pyx_v_19solar_system_energy_vx_earth = -29699.8;
 
   /* "solar_system_data_cy.pxi":52
  *     double vx_venus = -25968.7
@@ -16774,7 +16562,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_jupiter = -12376.3
  *     double vx_saturn = -8792.6
  */
-  __pyx_v_23solar_system_derivative_vx_mars = 1862.73;
+  __pyx_v_19solar_system_energy_vx_mars = 1862.73;
 
   /* "solar_system_data_cy.pxi":53
  *     double vx_earth = -29699.8
@@ -16783,7 +16571,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_saturn = -8792.6
  *     double vx_uranus = 4356.6
  */
-  __pyx_v_23solar_system_derivative_vx_jupiter = -12376.3;
+  __pyx_v_19solar_system_energy_vx_jupiter = -12376.3;
 
   /* "solar_system_data_cy.pxi":54
  *     double vx_mars = 1862.73
@@ -16792,7 +16580,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_uranus = 4356.6
  *     double vx_neptune = 4293.6
  */
-  __pyx_v_23solar_system_derivative_vx_saturn = -8792.6;
+  __pyx_v_19solar_system_energy_vx_saturn = -8792.6;
 
   /* "solar_system_data_cy.pxi":55
  *     double vx_jupiter = -12376.3
@@ -16801,7 +16589,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_neptune = 4293.6
  *     double vx_pluto = 5316.6
  */
-  __pyx_v_23solar_system_derivative_vx_uranus = 4356.6;
+  __pyx_v_19solar_system_energy_vx_uranus = 4356.6;
 
   /* "solar_system_data_cy.pxi":56
  *     double vx_saturn = -8792.6
@@ -16810,7 +16598,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vx_pluto = 5316.6
  * 
  */
-  __pyx_v_23solar_system_derivative_vx_neptune = 4293.6;
+  __pyx_v_19solar_system_energy_vx_neptune = 4293.6;
 
   /* "solar_system_data_cy.pxi":57
  *     double vx_uranus = 4356.6
@@ -16819,7 +16607,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  *     double vy_sun = -6.9255
  */
-  __pyx_v_23solar_system_derivative_vx_pluto = 5316.6;
+  __pyx_v_19solar_system_energy_vx_pluto = 5316.6;
 
   /* "solar_system_data_cy.pxi":59
  *     double vx_pluto = 5316.6
@@ -16828,7 +16616,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_mercury = 22185.2
  *     double vy_venus = 23441.6
  */
-  __pyx_v_23solar_system_derivative_vy_sun = -6.9255;
+  __pyx_v_19solar_system_energy_vy_sun = -6.9255;
 
   /* "solar_system_data_cy.pxi":60
  * 
@@ -16837,7 +16625,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_venus = 23441.6
  *     double vy_earth = -5883.3
  */
-  __pyx_v_23solar_system_derivative_vy_mercury = 22185.2;
+  __pyx_v_19solar_system_energy_vy_mercury = 22185.2;
 
   /* "solar_system_data_cy.pxi":61
  *     double vy_sun = -6.9255
@@ -16846,7 +16634,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_earth = -5883.3
  *     double vy_mars = -22150.6
  */
-  __pyx_v_23solar_system_derivative_vy_venus = 23441.6;
+  __pyx_v_19solar_system_energy_vy_venus = 23441.6;
 
   /* "solar_system_data_cy.pxi":62
  *     double vy_mercury = 22185.2
@@ -16855,7 +16643,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_mars = -22150.6
  *     double vy_jupiter = 5259.2
  */
-  __pyx_v_23solar_system_derivative_vy_earth = -5883.3;
+  __pyx_v_19solar_system_energy_vy_earth = -5883.3;
 
   /* "solar_system_data_cy.pxi":63
  *     double vy_venus = 23441.6
@@ -16864,7 +16652,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_jupiter = 5259.2
  *     double vy_saturn = 4944.9
  */
-  __pyx_v_23solar_system_derivative_vy_mars = -22150.6;
+  __pyx_v_19solar_system_energy_vy_mars = -22150.6;
 
   /* "solar_system_data_cy.pxi":64
  *     double vy_earth = -5883.3
@@ -16873,7 +16661,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_saturn = 4944.9
  *     double vy_uranus = 3233.3
  */
-  __pyx_v_23solar_system_derivative_vy_jupiter = 5259.2;
+  __pyx_v_19solar_system_energy_vy_jupiter = 5259.2;
 
   /* "solar_system_data_cy.pxi":65
  *     double vy_mars = -22150.6
@@ -16882,7 +16670,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_uranus = 3233.3
  *     double vy_neptune = 4928.1
  */
-  __pyx_v_23solar_system_derivative_vy_saturn = 4944.9;
+  __pyx_v_19solar_system_energy_vy_saturn = 4944.9;
 
   /* "solar_system_data_cy.pxi":66
  *     double vy_jupiter = 5259.2
@@ -16891,7 +16679,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_neptune = 4928.1
  *     double vy_pluto = -2884.6
  */
-  __pyx_v_23solar_system_derivative_vy_uranus = 3233.3;
+  __pyx_v_19solar_system_energy_vy_uranus = 3233.3;
 
   /* "solar_system_data_cy.pxi":67
  *     double vy_saturn = 4944.9
@@ -16900,7 +16688,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vy_pluto = -2884.6
  * 
  */
-  __pyx_v_23solar_system_derivative_vy_neptune = 4928.1;
+  __pyx_v_19solar_system_energy_vy_neptune = 4928.1;
 
   /* "solar_system_data_cy.pxi":68
  *     double vy_uranus = 3233.3
@@ -16909,7 +16697,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  *     double vz_sun = -0.31676
  */
-  __pyx_v_23solar_system_derivative_vy_pluto = -2884.6;
+  __pyx_v_19solar_system_energy_vy_pluto = -2884.6;
 
   /* "solar_system_data_cy.pxi":70
  *     double vy_pluto = -2884.6
@@ -16918,7 +16706,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_mercury = -1379.78
  *     double vz_venus = 1819.92
  */
-  __pyx_v_23solar_system_derivative_vz_sun = -0.31676;
+  __pyx_v_19solar_system_energy_vz_sun = -0.31676;
 
   /* "solar_system_data_cy.pxi":71
  * 
@@ -16927,7 +16715,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_venus = 1819.92
  *     double vz_earth = 0.050215
  */
-  __pyx_v_23solar_system_derivative_vz_mercury = -1379.78;
+  __pyx_v_19solar_system_energy_vz_mercury = -1379.78;
 
   /* "solar_system_data_cy.pxi":72
  *     double vz_sun = -0.31676
@@ -16936,7 +16724,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_earth = 0.050215
  *     double vz_mars = -509.6
  */
-  __pyx_v_23solar_system_derivative_vz_venus = 1819.92;
+  __pyx_v_19solar_system_energy_vz_venus = 1819.92;
 
   /* "solar_system_data_cy.pxi":73
  *     double vz_mercury = -1379.78
@@ -16945,7 +16733,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_mars = -509.6
  *     double vz_jupiter = 255.192
  */
-  __pyx_v_23solar_system_derivative_vz_earth = 0.050215;
+  __pyx_v_19solar_system_energy_vz_earth = 0.050215;
 
   /* "solar_system_data_cy.pxi":74
  *     double vz_venus = 1819.92
@@ -16954,7 +16742,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_jupiter = 255.192
  *     double vz_saturn = 263.754
  */
-  __pyx_v_23solar_system_derivative_vz_mars = -509.6;
+  __pyx_v_19solar_system_energy_vz_mars = -509.6;
 
   /* "solar_system_data_cy.pxi":75
  *     double vz_earth = 0.050215
@@ -16963,7 +16751,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_saturn = 263.754
  *     double vz_uranus = -166.986
  */
-  __pyx_v_23solar_system_derivative_vz_jupiter = 255.192;
+  __pyx_v_19solar_system_energy_vz_jupiter = 255.192;
 
   /* "solar_system_data_cy.pxi":76
  *     double vz_mars = -509.6
@@ -16972,7 +16760,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_uranus = -166.986
  *     double vz_neptune = -37.32
  */
-  __pyx_v_23solar_system_derivative_vz_saturn = 263.754;
+  __pyx_v_19solar_system_energy_vz_saturn = 263.754;
 
   /* "solar_system_data_cy.pxi":77
  *     double vz_jupiter = 255.192
@@ -16981,7 +16769,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_neptune = -37.32
  *     double vz_pluto = -1271.99
  */
-  __pyx_v_23solar_system_derivative_vz_uranus = -166.986;
+  __pyx_v_19solar_system_energy_vz_uranus = -166.986;
 
   /* "solar_system_data_cy.pxi":78
  *     double vz_saturn = 263.754
@@ -16990,7 +16778,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double vz_pluto = -1271.99
  * 
  */
-  __pyx_v_23solar_system_derivative_vz_neptune = -37.32;
+  __pyx_v_19solar_system_energy_vz_neptune = -37.32;
 
   /* "solar_system_data_cy.pxi":79
  *     double vz_uranus = -166.986
@@ -16999,7 +16787,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  *     double ti = 0
  */
-  __pyx_v_23solar_system_derivative_vz_pluto = -1271.99;
+  __pyx_v_19solar_system_energy_vz_pluto = -1271.99;
 
   /* "solar_system_data_cy.pxi":81
  *     double vz_pluto = -1271.99
@@ -17008,7 +16796,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double days_per_year = 365
  *     double hours_per_day = 24
  */
-  __pyx_v_23solar_system_derivative_ti = 0.0;
+  __pyx_v_19solar_system_energy_ti = 0.0;
 
   /* "solar_system_data_cy.pxi":82
  * 
@@ -17017,7 +16805,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double hours_per_day = 24
  *     double seconds_per_hour = 3600
  */
-  __pyx_v_23solar_system_derivative_days_per_year = 365.0;
+  __pyx_v_19solar_system_energy_days_per_year = 365.0;
 
   /* "solar_system_data_cy.pxi":83
  *     double ti = 0
@@ -17026,7 +16814,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double seconds_per_hour = 3600
  *     double dt = 24 * 3600
  */
-  __pyx_v_23solar_system_derivative_hours_per_day = 24.0;
+  __pyx_v_19solar_system_energy_hours_per_day = 24.0;
 
   /* "solar_system_data_cy.pxi":84
  *     double days_per_year = 365
@@ -17035,7 +16823,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double dt = 24 * 3600
  *     double G = 6.67 * 10 ** (-11.0)
  */
-  __pyx_v_23solar_system_derivative_seconds_per_hour = 3600.0;
+  __pyx_v_19solar_system_energy_seconds_per_hour = 3600.0;
 
   /* "solar_system_data_cy.pxi":85
  *     double hours_per_day = 24
@@ -17044,7 +16832,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     double G = 6.67 * 10 ** (-11.0)
  *     int number_dimensions = 3
  */
-  __pyx_v_23solar_system_derivative_dt = 86400.0;
+  __pyx_v_19solar_system_energy_dt = 86400.0;
 
   /* "solar_system_data_cy.pxi":86
  *     double seconds_per_hour = 3600
@@ -17053,7 +16841,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     int number_dimensions = 3
  * 
  */
-  __pyx_v_23solar_system_derivative_G = (6.67 * pow(10.0, -11.0));
+  __pyx_v_19solar_system_energy_G = (6.67 * pow(10.0, -11.0));
 
   /* "solar_system_data_cy.pxi":87
  *     double dt = 24 * 3600
@@ -17062,7 +16850,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  * m = np.array(
  */
-  __pyx_v_23solar_system_derivative_number_dimensions = 3;
+  __pyx_v_19solar_system_energy_number_dimensions = 3;
 
   /* "solar_system_data_cy.pxi":89
  *     int number_dimensions = 3
@@ -17084,7 +16872,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_mercury,
  *         m_venus,
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_sun); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_sun); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
   /* "solar_system_data_cy.pxi":92
@@ -17094,7 +16882,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_venus,
  *         m_earth,
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
   /* "solar_system_data_cy.pxi":93
@@ -17104,7 +16892,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_earth,
  *         m_mars,
  */
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_venus); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_venus); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
 
   /* "solar_system_data_cy.pxi":94
@@ -17114,7 +16902,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_mars,
  *         m_jupiter,
  */
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_earth); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_earth); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
 
   /* "solar_system_data_cy.pxi":95
@@ -17124,7 +16912,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_jupiter,
  *         m_saturn,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
   /* "solar_system_data_cy.pxi":96
@@ -17134,7 +16922,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_saturn,
  *         m_uranus,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "solar_system_data_cy.pxi":97
@@ -17144,7 +16932,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_uranus,
  *         m_neptune,
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
   /* "solar_system_data_cy.pxi":98
@@ -17154,7 +16942,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_neptune,
  *         m_pluto
  */
-  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_uranus); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_uranus); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
 
   /* "solar_system_data_cy.pxi":99
@@ -17164,7 +16952,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         m_pluto
  *     ],
  */
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_neptune); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_neptune); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
 
   /* "solar_system_data_cy.pxi":101
@@ -17174,7 +16962,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     dtype=np.double
  * )
  */
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_m_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_m_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
   /* "solar_system_data_cy.pxi":90
@@ -17273,7 +17061,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_GOTREF(__pyx_t_10);
   __pyx_t_14 = PyObject_Length(__pyx_t_10); if (unlikely(__pyx_t_14 == -1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_v_23solar_system_derivative_number_particles = __pyx_t_14;
+  __pyx_v_19solar_system_energy_number_particles = __pyx_t_14;
 
   /* "solar_system_data_cy.pxi":106
  * 
@@ -17287,8 +17075,8 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(__pyx_t_10);
   if (unlikely(!__pyx_t_15.memview)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __PYX_XDEC_MEMVIEW(&__pyx_v_23solar_system_derivative_g_masses, 1);
-  __pyx_v_23solar_system_derivative_g_masses = __pyx_t_15;
+  __PYX_XDEC_MEMVIEW(&__pyx_v_19solar_system_energy_g_masses, 1);
+  __pyx_v_19solar_system_energy_g_masses = __pyx_t_15;
   __pyx_t_15.memview = NULL;
   __pyx_t_15.data = NULL;
 
@@ -17312,7 +17100,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_mercury,
  *         vz_venus,
  */
-  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_sun); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_sun); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
 
   /* "solar_system_data_cy.pxi":111
@@ -17322,7 +17110,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_venus,
  *         vz_earth,
  */
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_mercury); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 111; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_mercury); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 111; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
   /* "solar_system_data_cy.pxi":112
@@ -17332,7 +17120,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_earth,
  *         vz_mars,
  */
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_venus); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_venus); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
   /* "solar_system_data_cy.pxi":113
@@ -17342,7 +17130,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_mars,
  *         vz_jupiter,
  */
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_earth); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_earth); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
 
   /* "solar_system_data_cy.pxi":114
@@ -17352,7 +17140,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_jupiter,
  *         vz_saturn,
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_mars); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_mars); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
   /* "solar_system_data_cy.pxi":115
@@ -17362,7 +17150,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_saturn,
  *         vz_uranus,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "solar_system_data_cy.pxi":116
@@ -17372,7 +17160,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_uranus,
  *         vz_neptune,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_saturn); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_saturn); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
   /* "solar_system_data_cy.pxi":117
@@ -17382,7 +17170,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_neptune,
  *         vz_pluto
  */
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_uranus); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_uranus); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 117; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
 
   /* "solar_system_data_cy.pxi":118
@@ -17392,7 +17180,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vz_pluto
  *     ],
  */
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_neptune); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 118; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_neptune); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 118; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
 
   /* "solar_system_data_cy.pxi":120
@@ -17402,7 +17190,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     dtype=np.double
  * )
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vz_pluto); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vz_pluto); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
   /* "solar_system_data_cy.pxi":109
@@ -17510,7 +17298,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_mercury,
  *         x_venus,
  */
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_sun); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_sun); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
 
   /* "solar_system_data_cy.pxi":127
@@ -17520,7 +17308,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_venus,
  *         x_earth,
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
   /* "solar_system_data_cy.pxi":128
@@ -17530,7 +17318,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_earth,
  *         x_mars,
  */
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_venus); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_venus); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_13);
 
   /* "solar_system_data_cy.pxi":129
@@ -17540,7 +17328,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_mars,
  *         x_jupiter,
  */
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_earth); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_earth); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
 
   /* "solar_system_data_cy.pxi":130
@@ -17550,7 +17338,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_jupiter,
  *         x_saturn,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
   /* "solar_system_data_cy.pxi":131
@@ -17560,7 +17348,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_saturn,
  *         x_uranus,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "solar_system_data_cy.pxi":132
@@ -17570,7 +17358,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_uranus,
  *         x_neptune,
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
   /* "solar_system_data_cy.pxi":133
@@ -17580,7 +17368,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_neptune,
  *         x_pluto
  */
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_uranus); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_uranus); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
 
   /* "solar_system_data_cy.pxi":134
@@ -17590,7 +17378,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         x_pluto
  *     ],
  */
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_neptune); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_neptune); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
   /* "solar_system_data_cy.pxi":136
@@ -17600,7 +17388,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     dtype=np.double
  * )
  */
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_x_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 136; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_x_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 136; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
   /* "solar_system_data_cy.pxi":125
@@ -17708,7 +17496,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_mercury,
  *         y_venus,
  */
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_sun); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_sun); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
 
   /* "solar_system_data_cy.pxi":143
@@ -17718,7 +17506,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_venus,
  *         y_earth,
  */
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_mercury); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_mercury); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
   /* "solar_system_data_cy.pxi":144
@@ -17728,7 +17516,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_earth,
  *         y_mars,
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_venus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_venus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
   /* "solar_system_data_cy.pxi":145
@@ -17738,7 +17526,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_mars,
  *         y_jupiter,
  */
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_earth); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_earth); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
   /* "solar_system_data_cy.pxi":146
@@ -17748,7 +17536,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_jupiter,
  *         y_saturn,
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_mars); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_mars); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
   /* "solar_system_data_cy.pxi":147
@@ -17758,7 +17546,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_saturn,
  *         y_uranus,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "solar_system_data_cy.pxi":148
@@ -17768,7 +17556,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_uranus,
  *         y_neptune,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_saturn); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_saturn); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
   /* "solar_system_data_cy.pxi":149
@@ -17778,7 +17566,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_neptune,
  *         y_pluto
  */
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_uranus); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 149; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_uranus); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 149; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
 
   /* "solar_system_data_cy.pxi":150
@@ -17788,7 +17576,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         y_pluto
  *     ],
  */
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_neptune); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_neptune); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_13);
 
   /* "solar_system_data_cy.pxi":152
@@ -17798,7 +17586,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     dtype=np.double
  * )
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_y_pluto); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_y_pluto); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
   /* "solar_system_data_cy.pxi":141
@@ -17906,7 +17694,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_mercury,
  *         z_venus,
  */
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_sun); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 158; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_sun); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 158; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
 
   /* "solar_system_data_cy.pxi":159
@@ -17916,7 +17704,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_venus,
  *         z_earth,
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 159; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 159; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
   /* "solar_system_data_cy.pxi":160
@@ -17926,7 +17714,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_earth,
  *         z_mars,
  */
-  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_venus); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 160; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_venus); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 160; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
 
   /* "solar_system_data_cy.pxi":161
@@ -17936,7 +17724,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_mars,
  *         z_jupiter,
  */
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_earth); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_earth); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_13);
 
   /* "solar_system_data_cy.pxi":162
@@ -17946,7 +17734,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_jupiter,
  *         z_saturn,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 162; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 162; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
   /* "solar_system_data_cy.pxi":163
@@ -17956,7 +17744,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_saturn,
  *         z_uranus,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "solar_system_data_cy.pxi":164
@@ -17966,7 +17754,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_uranus,
  *         z_neptune,
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
   /* "solar_system_data_cy.pxi":165
@@ -17976,7 +17764,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_neptune,
  *         z_pluto
  */
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_uranus); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 165; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_uranus); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 165; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
   /* "solar_system_data_cy.pxi":166
@@ -17986,7 +17774,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         z_pluto
  *     ],
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_neptune); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_neptune); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
   /* "solar_system_data_cy.pxi":168
@@ -17996,7 +17784,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     dtype=np.double
  * )
  */
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_z_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 168; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_z_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 168; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
   /* "solar_system_data_cy.pxi":157
@@ -18104,7 +17892,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_mercury,
  *         vx_venus,
  */
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_sun); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_sun); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
   /* "solar_system_data_cy.pxi":175
@@ -18114,7 +17902,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_venus,
  *         vx_earth,
  */
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_mercury); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_mercury); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
   /* "solar_system_data_cy.pxi":176
@@ -18124,7 +17912,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_earth,
  *         vx_mars,
  */
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_venus); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 176; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_venus); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 176; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
 
   /* "solar_system_data_cy.pxi":177
@@ -18134,7 +17922,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_mars,
  *         vx_jupiter,
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_earth); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 177; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_earth); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 177; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
   /* "solar_system_data_cy.pxi":178
@@ -18144,7 +17932,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_jupiter,
  *         vx_saturn,
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_mars); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 178; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_mars); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 178; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
   /* "solar_system_data_cy.pxi":179
@@ -18154,7 +17942,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_saturn,
  *         vx_uranus,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "solar_system_data_cy.pxi":180
@@ -18164,7 +17952,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_uranus,
  *         vx_neptune,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_saturn); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_saturn); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
   /* "solar_system_data_cy.pxi":181
@@ -18174,7 +17962,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_neptune,
  *         vx_pluto
  */
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_uranus); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_uranus); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_13);
 
   /* "solar_system_data_cy.pxi":182
@@ -18184,7 +17972,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vx_pluto
  *     ],
  */
-  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_neptune); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 182; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_neptune); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 182; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
 
   /* "solar_system_data_cy.pxi":184
@@ -18194,7 +17982,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     dtype=np.double
  * )
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vx_pluto); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 184; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vx_pluto); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 184; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
   /* "solar_system_data_cy.pxi":173
@@ -18302,7 +18090,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_mercury,
  *         vy_venus,
  */
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_sun); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 190; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_sun); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 190; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_13);
 
   /* "solar_system_data_cy.pxi":191
@@ -18312,7 +18100,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_venus,
  *         vy_earth,
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_mercury); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
   /* "solar_system_data_cy.pxi":192
@@ -18322,7 +18110,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_earth,
  *         vy_mars,
  */
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_venus); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 192; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_venus); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 192; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
 
   /* "solar_system_data_cy.pxi":193
@@ -18332,7 +18120,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_mars,
  *         vy_jupiter,
  */
-  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_earth); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_earth); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
 
   /* "solar_system_data_cy.pxi":194
@@ -18342,7 +18130,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_jupiter,
  *         vy_saturn,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_mars); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 194; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
   /* "solar_system_data_cy.pxi":195
@@ -18352,7 +18140,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_saturn,
  *         vy_uranus,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 195; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_jupiter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 195; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "solar_system_data_cy.pxi":196
@@ -18362,7 +18150,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_uranus,
  *         vy_neptune,
  */
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 196; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_saturn); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 196; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
   /* "solar_system_data_cy.pxi":197
@@ -18372,7 +18160,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_neptune,
  *         vy_pluto
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_uranus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 197; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_uranus); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 197; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
   /* "solar_system_data_cy.pxi":198
@@ -18382,7 +18170,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *         vy_pluto
  *     ],
  */
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_neptune); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_neptune); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
 
   /* "solar_system_data_cy.pxi":200
@@ -18392,7 +18180,7 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  *     dtype=np.double
  * )
  */
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_23solar_system_derivative_vy_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_19solar_system_energy_vy_pluto); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
   /* "solar_system_data_cy.pxi":189
@@ -18479,65 +18267,40 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_vy0, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "solar_system_derivative.pyx":39
+  /* "solar_system_energy.pyx":23
  * cdef:
  *     double d[3]
  *     double[::1] g_displacement = d             # <<<<<<<<<<<<<<
- *     double c[3]
- *     double[::1] g_central_force_ij = c
+ * cdef double calc_potential_energy(int i, int j, double[::1] position):
+ *     cdef:
  */
   __pyx_t_3 = __pyx_format_from_typeinfo(&__Pyx_TypeInfo_double);
   __pyx_t_1 = Py_BuildValue((char*) "("  __PYX_BUILD_PY_SSIZE_T  ")", ((Py_ssize_t)3));
-  if (unlikely(!__pyx_t_3 || !__pyx_t_1 || !PyBytes_AsString(__pyx_t_3))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__pyx_t_3 || !__pyx_t_1 || !PyBytes_AsString(__pyx_t_3))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_16 = __pyx_array_new(__pyx_t_1, sizeof(double), PyBytes_AS_STRING(__pyx_t_3), (char *) "fortran", (char *) __pyx_v_23solar_system_derivative_d);
-  if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_16 = __pyx_array_new(__pyx_t_1, sizeof(double), PyBytes_AS_STRING(__pyx_t_3), (char *) "fortran", (char *) __pyx_v_19solar_system_energy_d);
+  if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_16);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(((PyObject *)__pyx_t_16));
-  if (unlikely(!__pyx_t_15.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__pyx_t_15.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(((PyObject *)__pyx_t_16)); __pyx_t_16 = 0;
-  __PYX_XDEC_MEMVIEW(&__pyx_v_23solar_system_derivative_g_displacement, 1);
-  __pyx_v_23solar_system_derivative_g_displacement = __pyx_t_15;
+  __PYX_XDEC_MEMVIEW(&__pyx_v_19solar_system_energy_g_displacement, 1);
+  __pyx_v_19solar_system_energy_g_displacement = __pyx_t_15;
   __pyx_t_15.memview = NULL;
   __pyx_t_15.data = NULL;
 
-  /* "solar_system_derivative.pyx":41
- *     double[::1] g_displacement = d
- *     double c[3]
- *     double[::1] g_central_force_ij = c             # <<<<<<<<<<<<<<
- * cdef void calc_central_force(int i, int j, double[::1] w):
- *     cdef:
- */
-  __pyx_t_1 = __pyx_format_from_typeinfo(&__Pyx_TypeInfo_double);
-  __pyx_t_3 = Py_BuildValue((char*) "("  __PYX_BUILD_PY_SSIZE_T  ")", ((Py_ssize_t)3));
-  if (unlikely(!__pyx_t_1 || !__pyx_t_3 || !PyBytes_AsString(__pyx_t_1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_16 = __pyx_array_new(__pyx_t_3, sizeof(double), PyBytes_AS_STRING(__pyx_t_1), (char *) "fortran", (char *) __pyx_v_23solar_system_derivative_c);
-  if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_16);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_dc_double(((PyObject *)__pyx_t_16));
-  if (unlikely(!__pyx_t_15.memview)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(((PyObject *)__pyx_t_16)); __pyx_t_16 = 0;
-  __PYX_XDEC_MEMVIEW(&__pyx_v_23solar_system_derivative_g_central_force_ij, 1);
-  __pyx_v_23solar_system_derivative_g_central_force_ij = __pyx_t_15;
-  __pyx_t_15.memview = NULL;
-  __pyx_t_15.data = NULL;
-
-  /* "solar_system_derivative.pyx":1
+  /* "solar_system_energy.pyx":1
  * # distutils: extra_compile_args = -fopenmp             # <<<<<<<<<<<<<<
  * # distutils: extra_link_args = -fopenmp
  * 
  */
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "View.MemoryView":205
  *         info.obj = self
@@ -18546,10 +18309,10 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  *     def __dealloc__(array self):
  */
-  __pyx_t_1 = __pyx_capsule_create(((void *)(&__pyx_array_getbuffer)), __pyx_k_getbuffer_obj_view_flags); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_array_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = __pyx_capsule_create(((void *)(&__pyx_array_getbuffer)), __pyx_k_getbuffer_obj_view_flags); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_array_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   PyType_Modified(__pyx_array_type);
 
   /* "View.MemoryView":278
@@ -18559,12 +18322,12 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * cdef strided = Enum("<strided and direct>") # default
  * cdef indirect = Enum("<strided and indirect>")
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 278; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 278; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_XGOTREF(generic);
-  __Pyx_DECREF_SET(generic, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __pyx_t_1 = 0;
+  __Pyx_DECREF_SET(generic, __pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_3);
+  __pyx_t_3 = 0;
 
   /* "View.MemoryView":279
  * 
@@ -18573,12 +18336,12 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * cdef indirect = Enum("<strided and indirect>")
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 279; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 279; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_XGOTREF(strided);
-  __Pyx_DECREF_SET(strided, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __pyx_t_1 = 0;
+  __Pyx_DECREF_SET(strided, __pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_3);
+  __pyx_t_3 = 0;
 
   /* "View.MemoryView":280
  * cdef generic = Enum("<strided and direct or indirect>")
@@ -18587,12 +18350,12 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_XGOTREF(indirect);
-  __Pyx_DECREF_SET(indirect, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __pyx_t_1 = 0;
+  __Pyx_DECREF_SET(indirect, __pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_3);
+  __pyx_t_3 = 0;
 
   /* "View.MemoryView":283
  * 
@@ -18601,12 +18364,12 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * cdef indirect_contiguous = Enum("<contiguous and indirect>")
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 283; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 283; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_XGOTREF(contiguous);
-  __Pyx_DECREF_SET(contiguous, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __pyx_t_1 = 0;
+  __Pyx_DECREF_SET(contiguous, __pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_3);
+  __pyx_t_3 = 0;
 
   /* "View.MemoryView":284
  * 
@@ -18615,12 +18378,12 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 284; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 284; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_XGOTREF(indirect_contiguous);
-  __Pyx_DECREF_SET(indirect_contiguous, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_1);
-  __pyx_t_1 = 0;
+  __Pyx_DECREF_SET(indirect_contiguous, __pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_3);
+  __pyx_t_3 = 0;
 
   /* "View.MemoryView":498
  *         info.obj = self
@@ -18629,10 +18392,10 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  * 
  */
-  __pyx_t_1 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), __pyx_k_getbuffer_obj_view_flags); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_memoryview_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), __pyx_k_getbuffer_obj_view_flags); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_memoryview_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   PyType_Modified(__pyx_memoryview_type);
 
   /* "View.MemoryView":954
@@ -18642,10 +18405,10 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
  * 
  * 
  */
-  __pyx_t_1 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), __pyx_k_getbuffer_obj_view_flags); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 954; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_memoryviewslice_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 954; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = __pyx_capsule_create(((void *)(&__pyx_memoryview_getbuffer)), __pyx_k_getbuffer_obj_view_flags); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 954; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_memoryviewslice_type->tp_dict, __pyx_n_s_pyx_getbuffer, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 954; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   PyType_Modified(__pyx_memoryviewslice_type);
 
   /* "BufferFormatFromTypeInfo":1420
@@ -18676,11 +18439,11 @@ PyMODINIT_FUNC PyInit_solar_system_derivative(void)
   __Pyx_XDECREF(((PyObject *)__pyx_t_16));
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init solar_system_derivative", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init solar_system_energy", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init solar_system_derivative");
+    PyErr_SetString(PyExc_ImportError, "init solar_system_energy");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -18720,147 +18483,6 @@ static PyObject *__Pyx_GetBuiltinName(PyObject *name) {
     }
     return result;
 }
-
-static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name) {
-    PyObject *result;
-#if CYTHON_COMPILING_IN_CPYTHON
-    result = PyDict_GetItem(__pyx_d, name);
-    if (likely(result)) {
-        Py_INCREF(result);
-    } else {
-#else
-    result = PyObject_GetItem(__pyx_d, name);
-    if (!result) {
-        PyErr_Clear();
-#endif
-        result = __Pyx_GetBuiltinName(name);
-    }
-    return result;
-}
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw) {
-    PyObject *result;
-    ternaryfunc call = func->ob_type->tp_call;
-    if (unlikely(!call))
-        return PyObject_Call(func, arg, kw);
-    if (unlikely(Py_EnterRecursiveCall((char*)" while calling a Python object")))
-        return NULL;
-    result = (*call)(func, arg, kw);
-    Py_LeaveRecursiveCall();
-    if (unlikely(!result) && unlikely(!PyErr_Occurred())) {
-        PyErr_SetString(
-            PyExc_SystemError,
-            "NULL result without error in PyObject_Call");
-    }
-    return result;
-}
-#endif
-
-static CYTHON_INLINE void __Pyx_RaiseTooManyValuesError(Py_ssize_t expected) {
-    PyErr_Format(PyExc_ValueError,
-                 "too many values to unpack (expected %" CYTHON_FORMAT_SSIZE_T "d)", expected);
-}
-
-static CYTHON_INLINE void __Pyx_RaiseNeedMoreValuesError(Py_ssize_t index) {
-    PyErr_Format(PyExc_ValueError,
-                 "need more than %" CYTHON_FORMAT_SSIZE_T "d value%.1s to unpack",
-                 index, (index == 1) ? "" : "s");
-}
-
-static CYTHON_INLINE int __Pyx_IterFinish(void) {
-#if CYTHON_COMPILING_IN_CPYTHON
-    PyThreadState *tstate = PyThreadState_GET();
-    PyObject* exc_type = tstate->curexc_type;
-    if (unlikely(exc_type)) {
-        if (likely(exc_type == PyExc_StopIteration) || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration)) {
-            PyObject *exc_value, *exc_tb;
-            exc_value = tstate->curexc_value;
-            exc_tb = tstate->curexc_traceback;
-            tstate->curexc_type = 0;
-            tstate->curexc_value = 0;
-            tstate->curexc_traceback = 0;
-            Py_DECREF(exc_type);
-            Py_XDECREF(exc_value);
-            Py_XDECREF(exc_tb);
-            return 0;
-        } else {
-            return -1;
-        }
-    }
-    return 0;
-#else
-    if (unlikely(PyErr_Occurred())) {
-        if (likely(PyErr_ExceptionMatches(PyExc_StopIteration))) {
-            PyErr_Clear();
-            return 0;
-        } else {
-            return -1;
-        }
-    }
-    return 0;
-#endif
-}
-
-static int __Pyx_IternextUnpackEndCheck(PyObject *retval, Py_ssize_t expected) {
-    if (unlikely(retval)) {
-        Py_DECREF(retval);
-        __Pyx_RaiseTooManyValuesError(expected);
-        return -1;
-    } else {
-        return __Pyx_IterFinish();
-    }
-    return 0;
-}
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg) {
-    PyObject *self, *result;
-    PyCFunction cfunc;
-    cfunc = PyCFunction_GET_FUNCTION(func);
-    self = PyCFunction_GET_SELF(func);
-    if (unlikely(Py_EnterRecursiveCall((char*)" while calling a Python object")))
-        return NULL;
-    result = cfunc(self, arg);
-    Py_LeaveRecursiveCall();
-    if (unlikely(!result) && unlikely(!PyErr_Occurred())) {
-        PyErr_SetString(
-            PyExc_SystemError,
-            "NULL result without error in PyObject_Call");
-    }
-    return result;
-}
-#endif
-
-#if CYTHON_COMPILING_IN_CPYTHON
-static PyObject* __Pyx__PyObject_CallOneArg(PyObject *func, PyObject *arg) {
-    PyObject *result;
-    PyObject *args = PyTuple_New(1);
-    if (unlikely(!args)) return NULL;
-    Py_INCREF(arg);
-    PyTuple_SET_ITEM(args, 0, arg);
-    result = __Pyx_PyObject_Call(func, args, NULL);
-    Py_DECREF(args);
-    return result;
-}
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg) {
-#ifdef __Pyx_CyFunction_USED
-    if (likely(PyCFunction_Check(func) || PyObject_TypeCheck(func, __pyx_CyFunctionType))) {
-#else
-    if (likely(PyCFunction_Check(func))) {
-#endif
-        if (likely(PyCFunction_GET_FLAGS(func) & METH_O)) {
-            return __Pyx_PyObject_CallMethO(func, arg);
-        }
-    }
-    return __Pyx__PyObject_CallOneArg(func, arg);
-}
-#else
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg) {
-    PyObject* args = PyTuple_Pack(1, arg);
-    return (likely(args)) ? __Pyx_PyObject_Call(func, args, NULL) : NULL;
-}
-#endif
 
 static CYTHON_INLINE int __Pyx_IsLittleEndian(void) {
   unsigned int n = 1;
@@ -19616,6 +19238,42 @@ static void __Pyx_WriteUnraisable(const char *name, CYTHON_UNUSED int clineno,
 #endif
 }
 
+static CYTHON_INLINE PyObject *__Pyx_GetModuleGlobalName(PyObject *name) {
+    PyObject *result;
+#if CYTHON_COMPILING_IN_CPYTHON
+    result = PyDict_GetItem(__pyx_d, name);
+    if (likely(result)) {
+        Py_INCREF(result);
+    } else {
+#else
+    result = PyObject_GetItem(__pyx_d, name);
+    if (!result) {
+        PyErr_Clear();
+#endif
+        result = __Pyx_GetBuiltinName(name);
+    }
+    return result;
+}
+
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw) {
+    PyObject *result;
+    ternaryfunc call = func->ob_type->tp_call;
+    if (unlikely(!call))
+        return PyObject_Call(func, arg, kw);
+    if (unlikely(Py_EnterRecursiveCall((char*)" while calling a Python object")))
+        return NULL;
+    result = (*call)(func, arg, kw);
+    Py_LeaveRecursiveCall();
+    if (unlikely(!result) && unlikely(!PyErr_Occurred())) {
+        PyErr_SetString(
+            PyExc_SystemError,
+            "NULL result without error in PyObject_Call");
+    }
+    return result;
+}
+#endif
+
 static void __Pyx_RaiseArgtupleInvalid(
     const char* func_name,
     int exact,
@@ -20106,6 +19764,17 @@ static CYTHON_INLINE PyObject* __Pyx_decode_c_string(
     }
 }
 
+static CYTHON_INLINE void __Pyx_RaiseTooManyValuesError(Py_ssize_t expected) {
+    PyErr_Format(PyExc_ValueError,
+                 "too many values to unpack (expected %" CYTHON_FORMAT_SSIZE_T "d)", expected);
+}
+
+static CYTHON_INLINE void __Pyx_RaiseNeedMoreValuesError(Py_ssize_t index) {
+    PyErr_Format(PyExc_ValueError,
+                 "need more than %" CYTHON_FORMAT_SSIZE_T "d value%.1s to unpack",
+                 index, (index == 1) ? "" : "s");
+}
+
 static CYTHON_INLINE void __Pyx_RaiseNoneNotIterableError(void) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
 }
@@ -20490,6 +20159,55 @@ static CYTHON_INLINE long __Pyx_div_long(long a, long b) {
     q -= ((r != 0) & ((r ^ b) < 0));
     return q;
 }
+
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject *arg) {
+    PyObject *self, *result;
+    PyCFunction cfunc;
+    cfunc = PyCFunction_GET_FUNCTION(func);
+    self = PyCFunction_GET_SELF(func);
+    if (unlikely(Py_EnterRecursiveCall((char*)" while calling a Python object")))
+        return NULL;
+    result = cfunc(self, arg);
+    Py_LeaveRecursiveCall();
+    if (unlikely(!result) && unlikely(!PyErr_Occurred())) {
+        PyErr_SetString(
+            PyExc_SystemError,
+            "NULL result without error in PyObject_Call");
+    }
+    return result;
+}
+#endif
+
+#if CYTHON_COMPILING_IN_CPYTHON
+static PyObject* __Pyx__PyObject_CallOneArg(PyObject *func, PyObject *arg) {
+    PyObject *result;
+    PyObject *args = PyTuple_New(1);
+    if (unlikely(!args)) return NULL;
+    Py_INCREF(arg);
+    PyTuple_SET_ITEM(args, 0, arg);
+    result = __Pyx_PyObject_Call(func, args, NULL);
+    Py_DECREF(args);
+    return result;
+}
+static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg) {
+#ifdef __Pyx_CyFunction_USED
+    if (likely(PyCFunction_Check(func) || PyObject_TypeCheck(func, __pyx_CyFunctionType))) {
+#else
+    if (likely(PyCFunction_Check(func))) {
+#endif
+        if (likely(PyCFunction_GET_FLAGS(func) & METH_O)) {
+            return __Pyx_PyObject_CallMethO(func, arg);
+        }
+    }
+    return __Pyx__PyObject_CallOneArg(func, arg);
+}
+#else
+static CYTHON_INLINE PyObject* __Pyx_PyObject_CallOneArg(PyObject *func, PyObject *arg) {
+    PyObject* args = PyTuple_Pack(1, arg);
+    return (likely(args)) ? __Pyx_PyObject_Call(func, args, NULL) : NULL;
+}
+#endif
 
 #if !CYTHON_COMPILING_IN_CPYTHON
 static CYTHON_INLINE PyObject* __Pyx_PyBytes_Join(PyObject* sep, PyObject* values) {
@@ -21740,6 +21458,28 @@ static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_dc_dou
     }
     retcode = __Pyx_ValidateAndInit_memviewslice(axes_specs, __Pyx_IS_C_CONTIG,
                                                  (PyBUF_C_CONTIGUOUS | PyBUF_FORMAT | PyBUF_WRITABLE), 1,
+                                                 &__Pyx_TypeInfo_double, stack,
+                                                 &result, obj);
+    if (unlikely(retcode == -1))
+        goto __pyx_fail;
+    return result;
+__pyx_fail:
+    result.memview = NULL;
+    result.data = NULL;
+    return result;
+}
+
+static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_d_dc_double(PyObject *obj) {
+    __Pyx_memviewslice result = { 0, 0, { 0 }, { 0 }, { 0 } };
+    __Pyx_BufFmt_StackElem stack[1];
+    int axes_specs[] = { (__Pyx_MEMVIEW_DIRECT | __Pyx_MEMVIEW_FOLLOW), (__Pyx_MEMVIEW_DIRECT | __Pyx_MEMVIEW_CONTIG) };
+    int retcode;
+    if (obj == Py_None) {
+        result.memview = (struct __pyx_memoryview_obj *) Py_None;
+        return result;
+    }
+    retcode = __Pyx_ValidateAndInit_memviewslice(axes_specs, __Pyx_IS_C_CONTIG,
+                                                 (PyBUF_C_CONTIGUOUS | PyBUF_FORMAT | PyBUF_WRITABLE), 2,
                                                  &__Pyx_TypeInfo_double, stack,
                                                  &result, obj);
     if (unlikely(retcode == -1))
