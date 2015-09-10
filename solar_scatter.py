@@ -35,7 +35,7 @@ number_particles = 10
 number_dimensions = 3
 time_points = trajectories.shape[0]
 trajectories = np.reshape(trajectories, (time_points, number_particles, number_dimensions))
-pos = trajectories[0, :, :]
+current_position = trajectories[0, :, :]
 # pos = pos.T
 # pos = np.array([[10**6, 10**12, 10**11]], dtype=np.float64)
 size = np.empty(number_particles)
@@ -66,7 +66,7 @@ size[9] = .1
 
 size = size * distance / 20
 
-sp = gl.GLScatterPlotItem(pos=pos, size=size, color=color, pxMode=False)
+sp = gl.GLScatterPlotItem(pos=current_position, size=size, color=color, pxMode=False)
 wgl.addItem(sp)
 
 frame_count = 0
@@ -74,7 +74,7 @@ frame_count = 0
 
 def update():
     ## update surface positions and colors
-    global sp, d, pos, frame_count
+    global sp, d, current_position, frame_count
     if frame_count < time_points:
         pos = trajectories[frame_count, :, :]
     sp.setData(pos=pos, size=size, color=color)
