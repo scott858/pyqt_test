@@ -84,14 +84,12 @@ class PlotDialog(QtGui.QDialog):
         self.setLayout(self.main_layout)
         self.setWindowTitle("Basic Layouts")
 
-        self.initialize_colors()
-        self.initialize_sizes()
-        self.calc_trajectories()
-
         self.plot_widget = QtGui.QWidget()
 
-        self.frame_count = 0
+        self.calc_trajectories()
+        self.create_plot_grid_box()
 
+        self.frame_count = 0
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.update)
         self.timer.start(.1)
@@ -104,7 +102,8 @@ class PlotDialog(QtGui.QDialog):
     def create_plot_grid_box(self):
         self.plot_grid_box = QtGui.QGroupBox("Grid Layout")
         grid_layout = QtGui.QGridLayout()
-        self.main_layout.addWidget(grid_layout)
+        self.plot_grid_box.setLayout(grid_layout)
+        self.main_layout.addWidget(self.plot_grid_box)
 
         self.plot_widget_kinetic = pg.PlotWidget()
         self.plot_widget_potential = pg.PlotWidget()
@@ -131,9 +130,9 @@ class PlotDialog(QtGui.QDialog):
 
         self.calc_trajectories()
         self.current_position = self.trajectories[0, :, :]
-        self.size = np.empty(self.number_particles)
-        self.color = np.empty((self.number_particles, 4))
 
+        self.initialize_colors()
+        self.initialize_sizes()
         self.size = self.size * self.distance / 20
 
         self.scatter_plot = gl.GLScatterPlotItem(pos=self.current_position,
@@ -149,6 +148,7 @@ class PlotDialog(QtGui.QDialog):
 
         self.plot_fractional_total = self.plot_widget_fractional_total.plot()
         self.plot_widget_fractional_total.setTitle("Total Energy (fractional)")
+        self.scatter_plot.show()
 
     def create_menu(self):
         self.menu_bar = QtGui.QMenuBar()
@@ -231,6 +231,7 @@ class PlotDialog(QtGui.QDialog):
         self.gl_widget.setSizePolicy(self.plot_widget_fractional_total.sizePolicy())
 
     def initialize_colors(self):
+        self.color = np.empty((self.number_particles, 4))
         self.color[0] = (255, 255, 0, .75)
         self.color[1] = (255, 0, 0, .75)
         self.color[2] = (255, 0, 255, .75)
@@ -243,6 +244,7 @@ class PlotDialog(QtGui.QDialog):
         self.color[9] = (100, 102, 255, .75)
 
     def initialize_sizes(self):
+        self.size = np.empty(self.number_particles)
         self.size[0] = 10
         self.size[1] = .5
         self.size[2] = 2
@@ -262,6 +264,7 @@ class PlotDialog(QtGui.QDialog):
             self.frame_count = 0
             self.current_position = self.trajectories[self.frame_count, :, :]
         self.scatter_plot.setData(pos=self.current_position, size=self.size, color=self.color)
+
         if not self.frame_count % 10:
             self.plot_potential.setData(self.potential_energy[:self.frame_count])
             self.plot_kinetic.setData(self.kinetic_energy[:self.frame_count])
