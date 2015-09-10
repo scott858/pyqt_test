@@ -16,7 +16,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pyqt_test$volumetric.coverage" NAME="volumetric Coverage Results" MODIFIED="1441583214505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pyqt_test$solar_scatter_panelled.coverage" NAME="solar_scatter_panelled Coverage Results" MODIFIED="1441856607350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pyqt_test$solar_scatter_panelled.coverage" NAME="solar_scatter_panelled Coverage Results" MODIFIED="1441856662167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyqt_test$tutorial.coverage" NAME="tutorial Coverage Results" MODIFIED="1441574521947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyqt_test$solar_system.coverage" NAME="solar_system Coverage Results" MODIFIED="1441575709043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyqt_test$pyqtgraphs_examples.coverage" NAME="pyqtgraphs_examples Coverage Results" MODIFIED="1441674087697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -59,13 +59,13 @@
               <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
               <folding>
                 <element signature="e#24#99#1" expanded="false" />
-                <element signature="e#5263#5520#0" expanded="false" />
-                <element signature="e#5573#5927#0" expanded="false" />
-                <element signature="e#5968#6784#0" expanded="false" />
-                <element signature="e#6831#7188#0" expanded="false" />
-                <element signature="e#7231#8518#0" expanded="false" />
-                <element signature="e#8561#9122#0" expanded="false" />
-                <element signature="e#9683#9981#0" expanded="false" />
+                <element signature="e#5265#5522#0" expanded="false" />
+                <element signature="e#5575#5929#0" expanded="false" />
+                <element signature="e#5970#6786#0" expanded="false" />
+                <element signature="e#6833#7190#0" expanded="false" />
+                <element signature="e#7233#8520#0" expanded="false" />
+                <element signature="e#8563#9124#0" expanded="false" />
+                <element signature="e#9685#9983#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -899,13 +899,13 @@
           <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
           <folding>
             <element signature="e#24#99#1" expanded="false" />
-            <element signature="e#5263#5520#0" expanded="false" />
-            <element signature="e#5573#5927#0" expanded="false" />
-            <element signature="e#5968#6784#0" expanded="false" />
-            <element signature="e#6831#7188#0" expanded="false" />
-            <element signature="e#7231#8518#0" expanded="false" />
-            <element signature="e#8561#9122#0" expanded="false" />
-            <element signature="e#9683#9981#0" expanded="false" />
+            <element signature="e#5265#5522#0" expanded="false" />
+            <element signature="e#5575#5929#0" expanded="false" />
+            <element signature="e#5970#6786#0" expanded="false" />
+            <element signature="e#6833#7190#0" expanded="false" />
+            <element signature="e#7233#8520#0" expanded="false" />
+            <element signature="e#8563#9124#0" expanded="false" />
+            <element signature="e#9685#9983#0" expanded="false" />
           </folding>
         </state>
       </provider>

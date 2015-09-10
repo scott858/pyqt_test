@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Demonstrates use of GLScatterPlotItem with rapidly-updating plots.
-
-"""
-
 from pyqtgraph.Qt import QtCore, QtGui
 import pyqtgraph.opengl as gl
 import pyqtgraph as pg
@@ -76,7 +71,10 @@ class PlotDialog(QtGui.QDialog):
         self.create_form_group_box()
 
         self.main_layout = QtGui.QVBoxLayout()
+        self.setWindowTitle("Basic Layouts")
+
         self.create_plot_grid_box()
+
         self.main_layout.setMenuBar(self.menu_bar)
         self.main_layout.addWidget(self.horizontal_group_box)
         self.main_layout.addWidget(self.grid_group_box)
@@ -84,7 +82,6 @@ class PlotDialog(QtGui.QDialog):
         self.main_layout.addWidget(self.big_editor)
         self.main_layout.addWidget(self.button_box)
         self.setLayout(self.main_layout)
-        self.setWindowTitle("Basic Layouts")
 
         self.calc_trajectories()
 
