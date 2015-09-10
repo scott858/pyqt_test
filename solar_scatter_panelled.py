@@ -52,6 +52,7 @@ class PlotDialog(QtGui.QDialog):
         self.exit_action = None
 
         self.plot_grid_box = None
+        self.plot_widget = None
         self.plot_widget_kinetic = None
         self.plot_widget_potential = None
         self.plot_widget_fractional_total = None
@@ -75,6 +76,7 @@ class PlotDialog(QtGui.QDialog):
         self.create_form_group_box()
 
         self.main_layout = QtGui.QVBoxLayout()
+        self.create_plot_grid_box()
         self.main_layout.setMenuBar(self.menu_bar)
         self.main_layout.addWidget(self.horizontal_group_box)
         self.main_layout.addWidget(self.grid_group_box)
@@ -84,10 +86,7 @@ class PlotDialog(QtGui.QDialog):
         self.setLayout(self.main_layout)
         self.setWindowTitle("Basic Layouts")
 
-        self.plot_widget = QtGui.QWidget()
-
         self.calc_trajectories()
-        self.create_plot_grid_box()
 
         self.frame_count = 0
         self.timer = QtCore.QTimer()
@@ -105,6 +104,7 @@ class PlotDialog(QtGui.QDialog):
         self.plot_grid_box.setLayout(grid_layout)
         self.main_layout.addWidget(self.plot_grid_box)
 
+        self.plot_widget = QtGui.QWidget()
         self.plot_widget_kinetic = pg.PlotWidget()
         self.plot_widget_potential = pg.PlotWidget()
         self.plot_widget_fractional_total = pg.PlotWidget()
