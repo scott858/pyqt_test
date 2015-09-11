@@ -16,10 +16,10 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pyqt_test$volumetric.coverage" NAME="volumetric Coverage Results" MODIFIED="1441583214505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pyqt_test$solar_scatter_panelled.coverage" NAME="solar_scatter_panelled Coverage Results" MODIFIED="1441856662167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pyqt_test$solar_scatter_panelled.coverage" NAME="solar_scatter_panelled Coverage Results" MODIFIED="1441933195238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyqt_test$tutorial.coverage" NAME="tutorial Coverage Results" MODIFIED="1441574521947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyqt_test$solar_system.coverage" NAME="solar_system Coverage Results" MODIFIED="1441575709043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pyqt_test$pyqtgraphs_examples.coverage" NAME="pyqtgraphs_examples Coverage Results" MODIFIED="1441674087697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pyqt_test$pyqtgraphs_examples.coverage" NAME="pyqtgraphs_examples Coverage Results" MODIFIED="1441932708374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyqt_test$solar_system_energy_pyx.coverage" NAME="solar_system_energy.pyx Coverage Results" MODIFIED="1441651016192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solar_system" />
     <SUITE FILE_PATH="coverage/pyqt_test$solar_scatter.coverage" NAME="solar_scatter Coverage Results" MODIFIED="1441664510885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyqt_test$energy_run.coverage" NAME="energy_run Coverage Results" MODIFIED="1441661914403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solar_system" />
@@ -40,32 +40,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="solar_system_cython.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solar_system/solar_system_cython.py">
+      <file leaf-file-name="solar_system_derivative.pyx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar_system/solar_system_derivative.pyx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solar_scatter_panelled.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/solar_scatter_panelled.py">
+      <file leaf-file-name="solar_system_data_cy.pxi" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/solar_system/solar_system_data_cy.pxi">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70358306">
-              <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solar_scatter_panel.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/solar_scatter_panel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25641027">
+              <caret line="132" column="60" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
               <folding>
-                <element signature="e#24#99#1" expanded="false" />
-                <element signature="e#5265#5522#0" expanded="false" />
-                <element signature="e#5575#5929#0" expanded="false" />
-                <element signature="e#5970#6786#0" expanded="false" />
-                <element signature="e#6833#7190#0" expanded="false" />
-                <element signature="e#7233#8520#0" expanded="false" />
-                <element signature="e#8563#9124#0" expanded="false" />
-                <element signature="e#9685#9983#0" expanded="false" />
+                <element signature="e#344#2659#0" expanded="false" />
+                <element signature="e#4964#5203#0" expanded="false" />
+                <element signature="e#5254#5718#0" expanded="false" />
+                <element signature="e#5759#6601#0" expanded="false" />
+                <element signature="e#6649#7997#0" expanded="false" />
+                <element signature="e#8040#8601#0" expanded="false" />
+                <element signature="e#8644#9120#0" expanded="false" />
+                <element signature="e#9162#9460#0" expanded="false" />
+                <element signature="e#9503#9621#0" expanded="false" />
+                <element signature="e#9663#9696#0" expanded="false" />
+                <element signature="e#9728#10522#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,28 +87,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="energy_run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solar_system/energy_run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solar_system_python.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solar_system/solar_system_python.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,7 +112,6 @@
         <option value="$PROJECT_DIR$/pyqtgraphs_examples.py" />
         <option value="$PROJECT_DIR$/julia/calc_julia.py" />
         <option value="$PROJECT_DIR$/julia_cython/calc_julia.py" />
-        <option value="$PROJECT_DIR$/solar_system/solar_system_data_py.py" />
         <option value="$PROJECT_DIR$/solar_system/calc_conserved.pyx" />
         <option value="$PROJECT_DIR$/solar_system/setup_energy.py" />
         <option value="$PROJECT_DIR$/solar_system/solar_system_python.py" />
@@ -133,6 +121,9 @@
         <option value="$PROJECT_DIR$/solar_scatter.py" />
         <option value="$PROJECT_DIR$/solar_system/solar_system_cython.py" />
         <option value="$PROJECT_DIR$/solar_scatter_panelled.py" />
+        <option value="$PROJECT_DIR$/solar_system/solar_system_data_py.py" />
+        <option value="$PROJECT_DIR$/solar_system/solar_system_data_cy.pxi" />
+        <option value="$PROJECT_DIR$/solar_scatter_panel.py" />
       </list>
     </option>
   </component>
@@ -193,20 +184,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyqt_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyqt_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="solar_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -229,10 +206,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/solar_system" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/julia" />
       <recent name="$PROJECT_DIR$/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Python.solar_scatter_panelled">
@@ -321,7 +301,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pyqt_test" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solar_scatter_panelled.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solar_scatter_panel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -545,8 +525,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.solar_scatter_panelled" />
-        <item index="1" class="java.lang.String" itemvalue="Python.basic_window" />
-        <item index="2" class="java.lang.String" itemvalue="Python.pyqtgraphs_examples" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pyqtgraphs_examples" />
+        <item index="2" class="java.lang.String" itemvalue="Python.basic_window" />
         <item index="3" class="java.lang.String" itemvalue="Python.solar_scatter" />
         <item index="4" class="java.lang.String" itemvalue="Python.energy_run" />
       </list>
@@ -577,12 +557,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23966943" sideWeight="0.57898307" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.42101696" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31875" sideWeight="0.42101696" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.353125" sideWeight="0.57830507" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22609176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22609176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23911187" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33645833" sideWeight="0.63086975" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33583692" sideWeight="0.63086975" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24989791" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45833334" sideWeight="0.7109024" order="4" side_tool="false" content_ui="tabs" />
@@ -611,7 +591,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -791,29 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar_system/solar_system_data_cy.pxi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4011142">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar_system/solar_system_data_py.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0445683">
-          <caret line="199" column="21" selection-start-line="199" selection-start-column="21" selection-end-line="199" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solar_system/solar_system_derivative.pyx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solar_system/solar_system_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.5568686">
@@ -834,7 +791,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -867,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyqtgraphs_examples.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25233644">
@@ -893,19 +842,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solar_scatter_panelled.py">
+    <entry file="file://$PROJECT_DIR$/solar_scatter_full_panel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70358306">
-          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.019354839">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#24#99#1" expanded="false" />
-            <element signature="e#5265#5522#0" expanded="false" />
-            <element signature="e#5575#5929#0" expanded="false" />
-            <element signature="e#5970#6786#0" expanded="false" />
-            <element signature="e#6833#7190#0" expanded="false" />
-            <element signature="e#7233#8520#0" expanded="false" />
-            <element signature="e#8563#9124#0" expanded="false" />
-            <element signature="e#9685#9983#0" expanded="false" />
+            <element signature="e#24#62#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar_system/solar_system_data_py.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45177665">
+          <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar_system/solar_system_derivative.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar_system/solar_system_data_cy.pxi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyqtgraphs_examples.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solar_scatter_panel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25641027">
+          <caret line="132" column="60" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
+          <folding>
+            <element signature="e#344#2659#0" expanded="false" />
+            <element signature="e#4964#5203#0" expanded="false" />
+            <element signature="e#5254#5718#0" expanded="false" />
+            <element signature="e#5759#6601#0" expanded="false" />
+            <element signature="e#6649#7997#0" expanded="false" />
+            <element signature="e#8040#8601#0" expanded="false" />
+            <element signature="e#8644#9120#0" expanded="false" />
+            <element signature="e#9162#9460#0" expanded="false" />
+            <element signature="e#9503#9621#0" expanded="false" />
+            <element signature="e#9663#9696#0" expanded="false" />
+            <element signature="e#9728#10522#0" expanded="false" />
           </folding>
         </state>
       </provider>

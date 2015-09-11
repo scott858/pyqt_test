@@ -16793,7 +16793,7 @@ PyMODINIT_FUNC PyInit_solar_system_energy(void)
  *     double vz_pluto = -1271.99
  * 
  *     double ti = 0             # <<<<<<<<<<<<<<
- *     double days_per_year = 365
+ *     double days_per_year = 365.24
  *     double hours_per_day = 24
  */
   __pyx_v_19solar_system_energy_ti = 0.0;
@@ -16801,15 +16801,15 @@ PyMODINIT_FUNC PyInit_solar_system_energy(void)
   /* "solar_system_data_cy.pxi":82
  * 
  *     double ti = 0
- *     double days_per_year = 365             # <<<<<<<<<<<<<<
+ *     double days_per_year = 365.24             # <<<<<<<<<<<<<<
  *     double hours_per_day = 24
  *     double seconds_per_hour = 3600
  */
-  __pyx_v_19solar_system_energy_days_per_year = 365.0;
+  __pyx_v_19solar_system_energy_days_per_year = 365.24;
 
   /* "solar_system_data_cy.pxi":83
  *     double ti = 0
- *     double days_per_year = 365
+ *     double days_per_year = 365.24
  *     double hours_per_day = 24             # <<<<<<<<<<<<<<
  *     double seconds_per_hour = 3600
  *     double dt = 24 * 3600
@@ -16817,7 +16817,7 @@ PyMODINIT_FUNC PyInit_solar_system_energy(void)
   __pyx_v_19solar_system_energy_hours_per_day = 24.0;
 
   /* "solar_system_data_cy.pxi":84
- *     double days_per_year = 365
+ *     double days_per_year = 365.24
  *     double hours_per_day = 24
  *     double seconds_per_hour = 3600             # <<<<<<<<<<<<<<
  *     double dt = 24 * 3600

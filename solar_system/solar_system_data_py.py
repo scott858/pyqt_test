@@ -191,12 +191,12 @@ vz0 = np.array(
 
 ti = 0
 years = 10
-days_per_year = 365
+days_per_year = 365.24
 hours_per_day = 24
 seconds_per_hour = 3600
 tf = years * days_per_year * hours_per_day * seconds_per_hour
 time_interval = tf - ti
-dt = 24 * 3600
+dt = 24 * 3600 * days_per_year * .01
 G = 6.67 * 10 ** (-11.)
 
 number_particles = len(masses)

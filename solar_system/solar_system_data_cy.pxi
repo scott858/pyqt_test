@@ -79,7 +79,7 @@ cdef:
     double vz_pluto = -1271.99
 
     double ti = 0
-    double days_per_year = 365
+    double days_per_year = 365.24
     double hours_per_day = 24
     double seconds_per_hour = 3600
     double dt = 24 * 3600
